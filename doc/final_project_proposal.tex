@@ -1,0 +1,156 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{cvpr}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+\cvprfinalcopy % *** Uncomment this line for the final submission
+
+\def\cvprPaperID{****} % *** Enter the CVPR Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+\ifcvprfinal\pagestyle{empty}\fi
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{Deep Learning for Amazon Rainforest Monitoring by Satellite Images}
+
+\author{Rajanie Prabha\\
+{\tt\small prabha.rajanie@tum.de}
+\and
+Chinmay Prabhakar\\
+{\tt\small ga53tet@mytum.de}
+\and
+Sergei Rybakov\\
+{\tt\small sergei.rybakov@tum.de}
+\and
+Min-An Chao\\
+{\tt\small minan.chao@tum.de}
+}
+
+
+\maketitle
+%\thispagestyle{empty}
+
+%
+% Proposal I
+%
+\section*{Project Proposal}
+This project is based on a Kaggle challenge
+to automatically label given satellite images in Amazon rainforest 
+to monitor the human footprint.
+
+\section{Introduction}
+    Deep in the Amazon rainforest where people could hardly approach,
+    there are more and more deforestation as well as other illegal activities
+    happening without proper administration under the local authorities.
+    With the help of satellite images,
+    we are able to have entire view over the whole rainforest.
+    However without the help of machine learning,
+    it is also infeasible to track down every details manually.
+    Our goal is to build a neuron network 
+    and train it with given dataset with labels,
+    so that we will have a model to label the huge space of the rainforest
+    automatically.
+    These results will be useful to help local authorities to track down
+    detailed location of illegal or inappropriate human activities.
+
+    \subsection{Related Works}
+        \begin{itemize}
+            \item{
+                The original Kaggle challenge could be found here:
+                https://www.kaggle.com/c/planet-understanding-the-amazon-from-space
+            }
+            \item{
+                There is one related working paper concerning the same topic
+                by the Stanford University:
+                http://cs231n.stanford.edu/reports/2017/pdfs/915.pdf.
+                where several work regarding
+                the general processing tricks for computer vision tasks
+                using satellite images are also introduced and reviewed.
+            }
+            \item{
+                From the previous results
+                we see that the exploration on improving the accuracy
+                is not solely on the architecture of network itself,
+                but also on defining better loss function
+                and on finding an better optimization method.
+                So we will probably follow those experiences
+                and come up with our own results.
+            }
+        \end{itemize}
+
+\section{Dataset}
+    \begin{itemize}
+        \item {
+            There are given dataset provided by Planet (a company focusing on environment issue
+            and satellite image monitoring) as a standard test data for Kaggle challenge.
+            Extension dataset would be also available with other satellite image database
+            but we might have to label them ourselves to fit the classes defined by Planet.
+        }
+        \item {
+            The input data are satellite images with larger size.
+            Dataset provided by Kaggle are already cropped to a standard size
+            in order to make training and testing easier.
+            The data for training in this case must contain proper labels,
+            and the output will be one text label for each test image.
+            However, there would still be some labeling problem
+            because in one image there might exist 
+            features from two or more classes in the same time.
+        }
+    \end{itemize}
+
+\section{Methodology}
+    As a general architecture,
+    we will start by some data augmentation techniques and
+    use a pretrained model like VGG or ResNet. 
+    We will further fine-tune this model with the satellite images of Amazon
+    to get a set of class label probabilities. 
+    We will use binary cross entropy loss for calculating the loss function and
+    Adam optimizer as a start for our training,
+    then we apply the adjustment to conquer the data imbalance problem,
+    and finally repeat the whole procedure as shown in related work.
+
+    The further extensions might be the followings.
+    (1)~Think more about the data augmentation and data imbalance problem,
+    could we also come up with a more generalized way for satellite images?
+    We might have to explore more about the related works dealing with 
+    satellite images.
+    (2)~Since the dataset contains the infra-red dimension,
+    we could also think of if we should separate that dimension
+    from other RGB channels to make our model learns different things from it.
+    (3)~Since one image in this dataset could contain several labels,
+    the problem is somehow related to multiple object detection 
+    instead of typical classification.
+    Maybe we should also work on the methods used for multiple object detection.
+
+
+\section{Outcome}
+    We hope to come up with a baseline accuracy at 90\%
+    with the pretrained network as a baseline,
+    then we hope to find more domain knowledge to improve our work.
+    The satellite image classification would have
+    different challenges other than the RGB images we used in our homework.
+    We expect to first have a complete repetition after the states of the art,
+    and then based on the extensions mentioned above to explore more.
+    Those knowledge should be based on some characteristics
+    of satellite images or rainforest landscapes
+    but not specific rules handcrafted for this project only.
+
+{\small
+\bibliographystyle{ieee}
+\bibliography{bib}
+}
+
+\end{document}
