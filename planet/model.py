@@ -1,11 +1,13 @@
-#-*- coding: utf8 -*-
+# -*- coding: utf8 -*-
 import os, sys, logging
 import torch, torch.nn as nn
 import math, urllib2
 import torch.utils.model_zoo as model_zoo
 import torch.nn.functional as F
-from torchvision.models import densenet121, densenet169, densenet201
-from torchvision.models import vgg19_bn
+
+from torchvision.models import densenet121, densenet169, densenet201,vgg16,vgg16_bn,vgg19_bn,resnet18
+from tif_model import vgg16_tif
+
 from __init__ import PRE_TRAINED_RESNET18, NUM_CLASSES, MODEL_FOLDER
 import tif_model
 import mix_model
@@ -14,8 +16,7 @@ import mix_model
 logger = logging.getLogger('app')
 logger.setLevel(logging.DEBUG)
 
-__all__ = ['ResNet', 'resnet18']
-
+__all__ = ['ResNet', 'resnet18', 'vgg19_our_bn_tif']
 
 model_urls = {
     'resnet18': 'https://download.pytorch.org/models/resnet18-5c106cde.pth',
@@ -24,10 +25,9 @@ model_urls = {
 
 model_cache_path = '/tmp/model_cache_%s.pth'
 
-
-curry = lambda func, *args, **kw:\
-            lambda *p, **n:\
-                 func(*args + p, **dict(kw.items() + n.items()))
+curry = lambda func, *args, **kw: \
+    lambda *p, **n: \
+        func(*args + p, **dict(kw.items() + n.items()))
 
 
 def conv3x3(in_planes, out_planes, stride=1):
@@ -83,10 +83,10 @@ class ResNet(nn.Module):
         self.layer3 = self._make_layer(block, 256, layers[2], stride=2)
         self.layer4 = self._make_layer(block, 512, layers[3], stride=2)
         self.avgpool = nn.AvgPool2d(8, 1)
-        #adapt gradient
-        #def hook_a(module, grad_input, grad_output):
+        # adapt gradient
+        # def hook_a(module, grad_input, grad_output):
         #    return tuple(map(lambda x: x.mul(0.5), grad_input))
-        #self.avgpool.register_backward_hook(hook_a)
+        # self.avgpool.register_backward_hook(hook_a)
         #
         self.fc = nn.Linear(512 * block.expansion, num_classes)
 
@@ -129,6 +129,7 @@ class ResNet(nn.Module):
         x = self.layer3(x)
         x = self.layer4(x)
         x = self.avgpool(x)
+        print("The size is ", x.size)
         if x.size(2) != 1:
             x = F.avg_pool2d(x, x.size(2))
         x = x.view(x.size(0), -1)
@@ -148,6 +149,7 @@ def try_load_model(model_name):
             os.system(command_name)
         _model_loaded = torch.load(fname)
     return _model_loaded
+
 
 
 def resnet18(num_classes, pretrained=False):
@@ -224,7 +226,7 @@ def resnet18_fc(num_classes, pretrained, embedding_len, bn, dp=False):
         model = model.module
 
     model.fc1 = nn.Linear(512, embedding_len)
-    model.relu_fc1 = nn.ReLU(inplace=True) #new
+    model.relu_fc1 = nn.ReLU(inplace=True)  # new
     model.fc = nn.Linear(embedding_len, num_classes)
     if bn:
         model.fc_bn = nn.BatchNorm1d(embedding_len)
@@ -264,6 +266,67 @@ def resnet18_fc(num_classes, pretrained, embedding_len, bn, dp=False):
     return model, layers
 
 
+
+def vgg16_our(num_classes, pretrained):
+    "vgg16 + FC layer embedding"
+    model = vgg16(pretrained=pretrained)
+    model.classifier = nn.Sequential(
+                                nn.Linear(in_features=25088, out_features=4096),
+                                nn.ReLU(inplace=True),
+                                nn.Dropout(p=0.5),
+                                nn.Linear(4096, num_classes)
+                            )
+    print(model)
+    layers = [(model.classifier, 1), (model.features, 0.1)]
+
+    return model, layers
+
+def vgg16_our_bn(num_classes, pretrained):
+    "vgg16 + FC layer embedding"
+    model = vgg16_bn(pretrained=pretrained)
+    model.classifier = nn.Sequential(
+                                nn.Linear(in_features=25088, out_features=4096),
+                                nn.ReLU(inplace=True),
+                                nn.Dropout(p=0.5),
+                                nn.Linear(4096, num_classes)
+                            )
+    print(model)
+    layers = [(model.classifier, 1), (model.features, 0.1)]
+
+    return model, layers
+
+def vgg19_our_bn(num_classes, pretrained):
+    "vgg16 + FC layer embedding"
+    model = vgg19_bn(pretrained=pretrained)
+    model.classifier = nn.Sequential(
+                                nn.Linear(in_features=25088, out_features=4096),
+                                nn.ReLU(inplace=True),
+                                nn.Dropout(p=0.5),
+                                nn.Linear(4096, num_classes)
+                            )
+    print(model)
+    layers = [(model.classifier, 1), (model.features, 0.1)]
+
+    return model, layers
+
+
+def vgg19_our_bn_tif(num_classes, pretrained):
+    "vgg16 + FC layer embedding"
+    model,_ = vgg16_tif(pretrained=False)
+    #Plugging in the classifier layer later
+    model.add_module(model.classifier)
+    model.classifier = nn.Sequential(
+                                nn.Linear(in_features=8*8*512, out_features=4096),
+                                nn.ReLU(inplace=True),
+                                nn.Dropout(p=0.5),
+                                nn.Linear(4096, num_classes)
+                            )
+    print(model)
+    layers = [(model.classifier, 1), (model.features, 0.1)]
+
+    return model, layers
+
+
 def resnet18_fc128(num_classes=NUM_CLASSES, pretrained=True, bn=False):
     "0.08693 loss, LB: 0.92047"
     return resnet18_fc(num_classes, pretrained, embedding_len=128, bn=False)
@@ -290,7 +353,7 @@ def resnet18_fcbn_256_warmup(num_classes, pretrained=False):
 def resnet18_fcbn_256_v2(num_classes=NUM_CLASSES, pretrained=True):
     ""
     model, _ = resnet18_fc(num_classes, pretrained, embedding_len=256, bn=True)
-    layers = [(model.fc1, 1), (model.fc, 1), (model.layer4, 0.1), (model.layer3, 0.1),]
+    layers = [(model.fc1, 1), (model.fc, 1), (model.layer4, 0.1), (model.layer3, 0.1), ]
 
     return model, layers
 
@@ -425,16 +488,16 @@ def densenet201_(num_classes=NUM_CLASSES, pretrained=True):
 
     return model, layers
 
+#
+# def resnext_101(num_classes=NUM_CLASSES, pretrained=True):
+#     from legacy import resnext_pth
+#     model = resnext_pth.resnext_101_32x4d
+#     model.load_state_dict(torch.load(os.path.join(MODEL_FOLDER, 'resnext.pth')))
+#     model._modules['10']._modules['1'] = nn.Linear(2048, num_classes)
 
-def resnext_101(num_classes=NUM_CLASSES, pretrained=True):
-    from legacy import resnext_pth
-    model = resnext_pth.resnext_101_32x4d
-    model.load_state_dict(torch.load(os.path.join(MODEL_FOLDER, 'resnext.pth')))
-    model._modules['10']._modules['1'] = nn.Linear(2048, num_classes)
+#    layers = [(model._modules['10'], 1), (model._modules['6'], 0.1), (model._modules['7'], 0.1)]
 
-    layers = [(model._modules['10'], 1), (model._modules['6'], 0.1), (model._modules['7'], 0.1)]
-
-    return model, None
+#    return model, None
 
 def vgg19_our_bn(num_classes=NUM_CLASSES, pretrained=True):
     "vgg16 + FC layer embedding"
@@ -455,7 +518,7 @@ tif_resnet18 = tif_model.tif_resnet18
 tif_resnet18_fcbn = tif_model.tif_resnet18_fcbn
 tif_index_resnet18 = tif_model.tif_index_resnet18
 
-
+#mix_net_v0 = curry(mix_model.mix_net_v0, resnet18_fcbn_256=vgg16)
 mix_net_v1 = curry(mix_model.mix_net_v1, resnet18_fcbn_256=resnet18_fcbn_256)
 mix_net_v2 = curry(mix_model.mix_net_v2, resnet18_fcbn_256=resnet18_fcbn_256)
 mix_net_v3 = curry(mix_model.mix_net_v3, resnet18_fcbn_256=resnet18_fcbn_256)
@@ -475,17 +538,19 @@ mixnet18_256_v2 = curry(mix_model.mixnet18_256_v2, resnet18_conv_only=resnet18_c
 
 def main():
     model, _ = mix_net_v6()
-    #model = ResNet(BasicBlock, [2,2,2,2], num_classes=17)
+    # model = ResNet(BasicBlock, [2,2,2,2], num_classes=17)
 
-    print model
-    #print dir(model.classifier)
+    print(model)
+    # print dir(model.classifier)
     model = model.cuda()
     model.eval()
 
     x = torch.FloatTensor(torch.zeros((1, 6, 256, 256)))
     input = torch.autograd.Variable(x.cuda())
     res = model(input)
-    print 'res', res.size()
+    print('res', res.size())
+
 
 if __name__ == '__main__':
     sys.exit(main())
+
