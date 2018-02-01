@@ -4,8 +4,10 @@ import torch, torch.nn as nn
 import math, urllib2
 import torch.utils.model_zoo as model_zoo
 import torch.nn.functional as F
+
 from torchvision.models import densenet121, densenet169, densenet201,vgg16,vgg16_bn,vgg19_bn,resnet18
 from tif_model import vgg16_tif
+
 from __init__ import PRE_TRAINED_RESNET18, NUM_CLASSES, MODEL_FOLDER
 import tif_model
 import mix_model
@@ -496,6 +498,20 @@ def densenet201_(num_classes=NUM_CLASSES, pretrained=True):
 #    layers = [(model._modules['10'], 1), (model._modules['6'], 0.1), (model._modules['7'], 0.1)]
 
 #    return model, None
+
+def vgg19_our_bn(num_classes=NUM_CLASSES, pretrained=True):
+    "vgg16 + FC layer embedding"
+    model = vgg19_bn(pretrained=pretrained)
+    model.classifier = nn.Sequential(
+                                nn.Linear(in_features=25088, out_features=4096),
+                                nn.ReLU(inplace=True),
+                                nn.Dropout(p=0.5),
+                                nn.Linear(4096, num_classes)
+                            )
+    print(model)
+    layers = [(model.classifier, 1), (model.features, 0.1)]
+
+    return model, layers
 
 
 tif_resnet18 = tif_model.tif_resnet18
