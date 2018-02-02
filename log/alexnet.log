@@ -1,0 +1,656 @@
+2018-01-28 21:42:26 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'mix_index_nozoom_256', 'epoch': 2, 'lr': 0.3, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'mix', 'batch_size': 96, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'mix_net_v6'}
+2018-01-28 21:42:26 Loading train/val split from file
+2018-01-28 21:42:27 Starting learning single model
+2018-01-28 21:42:27 Initing model
+2018-01-28 21:42:28 Resnet18: Loading pretrained
+2018-01-28 21:42:31 Loading from /home/rajanie007/dl4cv/planet/pretrained/resnet18_fcbn_256.pth.tar
+2018-01-28 21:42:32 Learning exact layers, number=7
+2018-01-28 21:42:32 Layer=0, lr=0.30000
+2018-01-28 21:42:32 Layer=1, lr=0.30000
+2018-01-28 21:42:32 Layer=2, lr=0.30000
+2018-01-28 21:42:32 Layer=3, lr=0.03000
+2018-01-28 21:42:32 Layer=4, lr=0.03000
+2018-01-28 21:42:32 Layer=5, lr=0.01500
+2018-01-28 21:42:32 Layer=6, lr=0.30000
+2018-01-28 21:42:32 Loss is MultiLabelSoftMarginLoss without weights
+2018-01-28 21:42:32 Epoch 0
+2018-01-28 21:44:25 Epoch: [0][50/338]	Time 1.395 (2.221)	Data 0.000 (0.839)	Accuracy 0.0000 (0.0000)	Loss 0.1565 (0.3253)	
+2018-01-28 21:46:07 Epoch: [0][100/338]	Time 1.614 (2.128)	Data 0.569 (0.870)	Accuracy 0.0000 (0.0000)	Loss 0.1348 (0.2308)	
+2018-01-28 21:47:46 Epoch: [0][150/338]	Time 1.390 (2.082)	Data 0.282 (0.883)	Accuracy 0.0000 (0.0000)	Loss 0.1086 (0.1916)	
+2018-01-28 21:49:29 Epoch: [0][200/338]	Time 1.776 (2.074)	Data 0.671 (0.861)	Accuracy 0.0000 (0.0000)	Loss 0.0826 (0.1703)	
+2018-01-28 21:59:53 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'mix_index_nozoom_256', 'epoch': 2, 'lr': 0.3, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'mix', 'batch_size': 96, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'mix_net_v6'}
+2018-01-28 21:59:53 Loading train/val split from file
+2018-01-28 21:59:55 Starting learning single model
+2018-01-28 21:59:55 Initing model
+2018-01-28 21:59:56 Resnet18: Loading pretrained
+2018-01-28 22:00:10 Loading from /home/rajanie007/dl4cv/planet/pretrained/resnet18_fcbn_256.pth.tar
+2018-01-28 22:00:11 Learning exact layers, number=7
+2018-01-28 22:00:11 Layer=0, lr=0.30000
+2018-01-28 22:00:11 Layer=1, lr=0.30000
+2018-01-28 22:00:11 Layer=2, lr=0.30000
+2018-01-28 22:00:11 Layer=3, lr=0.03000
+2018-01-28 22:00:11 Layer=4, lr=0.03000
+2018-01-28 22:00:11 Layer=5, lr=0.01500
+2018-01-28 22:00:11 Layer=6, lr=0.30000
+2018-01-28 22:00:11 Loss is MultiLabelSoftMarginLoss without weights
+2018-01-28 22:00:11 Epoch 0
+2018-01-28 22:04:42 Epoch: [0][50/338]	Time 9.131 (5.309)	Data 8.147 (4.000)	Accuracy 0.0000 (0.0000)	Loss 0.1541 (0.3239)	
+2018-01-28 22:08:57 Epoch: [0][100/338]	Time 5.688 (5.205)	Data 4.704 (4.028)	Accuracy 0.0000 (0.0000)	Loss 0.1271 (0.2314)	
+2018-01-28 22:13:13 Epoch: [0][150/338]	Time 8.190 (5.181)	Data 7.084 (4.062)	Accuracy 0.0000 (0.0000)	Loss 0.1090 (0.1916)	
+2018-01-28 22:17:31 Epoch: [0][200/338]	Time 7.845 (5.172)	Data 6.737 (4.081)	Accuracy 0.0000 (0.0000)	Loss 0.1168 (0.1701)	
+2018-01-28 22:21:53 Epoch: [0][250/338]	Time 9.072 (5.186)	Data 8.086 (4.105)	Accuracy 0.0000 (0.0000)	Loss 0.0928 (0.1564)	
+2018-01-28 22:26:14 Epoch: [0][300/338]	Time 9.356 (5.192)	Data 8.233 (4.105)	Accuracy 0.0000 (0.0000)	Loss 0.0692 (0.1462)	
+2018-01-28 22:29:23 Epoch: [0][337/338]	Time 6.002 (5.183)	Data 0.810 (4.088)	Accuracy 0.0000 (0.0000)	Loss 0.0757 (0.1412)	
+2018-01-28 22:29:23 Validating model
+2018-01-28 22:36:11 Test: [84/84]	Time 3.008 (4.860)	Loss 0.09781	F2: 0.852776955907	
+2018-01-28 22:36:11 Current model is best by val score 0.09781 < -1.00000
+2018-01-28 22:36:11 early_stop_counter: 0
+2018-01-28 22:36:12 Epoch 1
+2018-01-28 22:37:20 Epoch: [1][50/338]	Time 1.305 (1.326)	Data 0.000 (0.032)	Accuracy 0.0000 (0.0000)	Loss 0.0712 (0.0947)	
+2018-01-28 22:38:25 Epoch: [1][100/338]	Time 1.306 (1.314)	Data 0.001 (0.016)	Accuracy 0.0000 (0.0000)	Loss 0.1013 (0.0930)	
+2018-01-28 22:39:30 Epoch: [1][150/338]	Time 1.305 (1.311)	Data 0.000 (0.011)	Accuracy 0.0000 (0.0000)	Loss 0.0890 (0.0929)	
+2018-01-28 22:40:35 Epoch: [1][200/338]	Time 1.308 (1.309)	Data 0.000 (0.008)	Accuracy 0.0000 (0.0000)	Loss 0.0974 (0.0928)	
+2018-01-28 22:41:40 Epoch: [1][250/338]	Time 1.308 (1.308)	Data 0.001 (0.007)	Accuracy 0.0000 (0.0000)	Loss 0.0832 (0.0916)	
+2018-01-28 22:42:45 Epoch: [1][300/338]	Time 1.292 (1.307)	Data 0.001 (0.006)	Accuracy 0.0000 (0.0000)	Loss 0.0999 (0.0917)	
+2018-01-28 22:43:33 Epoch: [1][337/338]	Time 1.132 (1.306)	Data 0.000 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.0893 (0.0912)	
+2018-01-28 22:43:33 Validating model
+2018-01-28 22:44:11 Test: [84/84]	Time 0.369 (0.453)	Loss 0.08779	F2: 0.871056150398	
+2018-01-28 22:44:11 Current model is best by val score 0.08779 < 0.09781
+2018-01-28 22:44:11 early_stop_counter: 0
+2018-01-28 22:44:15 Initing model
+2018-01-28 22:44:15 Resnet18: Loading pretrained
+2018-01-28 22:44:16 Loading from /home/rajanie007/dl4cv/planet/pretrained/resnet18_fcbn_256.pth.tar
+2018-01-28 22:44:17 Loaded best model /home/rajanie007/dl4cv/results/model_best.pth.tar, arch=mix_net_v6
+2018-01-28 22:44:17 Estimating thresholds
+2018-01-28 22:44:57 	 slice=0, name=agriculture, best_threshold=0.140, metric=0.9268
+2018-01-28 22:44:58 	 slice=1, name=artisinal_mine, best_threshold=0.150, metric=0.9269
+2018-01-28 22:44:59 	 slice=2, name=bare_ground, best_threshold=0.100, metric=0.9273
+2018-01-28 22:45:01 	 slice=3, name=blooming, best_threshold=0.570, metric=0.9273
+2018-01-28 22:45:02 	 slice=4, name=blow_down, best_threshold=0.050, metric=0.9273
+2018-01-28 22:45:03 	 slice=5, name=clear, best_threshold=0.060, metric=0.9275
+2018-01-28 22:45:05 	 slice=6, name=cloudy, best_threshold=0.080, metric=0.9281
+2018-01-28 22:45:06 	 slice=7, name=conventional_mine, best_threshold=0.170, metric=0.9282
+2018-01-28 22:45:08 	 slice=8, name=cultivation, best_threshold=0.180, metric=0.9284
+2018-01-28 22:45:09 	 slice=9, name=habitation, best_threshold=0.140, metric=0.9286
+2018-01-28 22:45:10 	 slice=10, name=haze, best_threshold=0.150, metric=0.9289
+2018-01-28 22:45:12 	 slice=11, name=partly_cloudy, best_threshold=0.180, metric=0.9289
+2018-01-28 22:45:13 	 slice=12, name=primary, best_threshold=0.230, metric=0.9291
+2018-01-28 22:45:15 	 slice=13, name=road, best_threshold=0.260, metric=0.9293
+2018-01-28 22:45:16 	 slice=14, name=selective_logging, best_threshold=0.180, metric=0.9294
+2018-01-28 22:45:17 	 slice=15, name=slash_burn, best_threshold=0.260, metric=0.9295
+2018-01-28 22:45:19 	 slice=16, name=water, best_threshold=0.220, metric=0.9295
+2018-01-28 22:45:19 Precision/recall for each category
+2018-01-28 22:45:19 	 name=agriculture, count=12315, pre=0.7417, recall=0.9537
+2018-01-28 22:45:19 	 name=artisinal_mine, count=339, pre=0.6854, recall=0.8592
+2018-01-28 22:45:19 	 name=bare_ground, count=862, pre=0.3137, recall=0.5304
+2018-01-28 22:45:19 	 name=blooming, count=332, pre=0.5000, recall=0.0781
+2018-01-28 22:45:19 	 name=blow_down, count=101, pre=0.0000, recall=0.0000
+2018-01-28 22:45:19 	 name=clear, count=28431, pre=0.9030, recall=0.9966
+2018-01-28 22:45:19 	 name=cloudy, count=2089, pre=0.6171, recall=0.9803
+2018-01-28 22:45:19 	 name=conventional_mine, count=100, pre=0.4762, recall=0.4762
+2018-01-28 22:45:19 	 name=cultivation, count=4547, pre=0.4597, recall=0.8018
+2018-01-28 22:45:19 	 name=habitation, count=3660, pre=0.5792, recall=0.8621
+2018-01-28 22:45:19 	 name=haze, count=2697, pre=0.5918, recall=0.8436
+2018-01-28 22:45:19 	 name=partly_cloudy, count=7261, pre=0.8329, recall=0.9787
+2018-01-28 22:45:19 	 name=primary, count=37513, pre=0.9705, recall=0.9952
+2018-01-28 22:45:19 	 name=road, count=8071, pre=0.7567, recall=0.9125
+2018-01-28 22:45:19 	 name=selective_logging, count=340, pre=0.4603, recall=0.3919
+2018-01-28 22:45:19 	 name=slash_burn, count=209, pre=1.0000, recall=0.0500
+2018-01-28 22:45:19 	 name=water, count=7411, pre=0.7047, recall=0.8708
+2018-01-28 22:45:27 F2 score before applying tresholds is 0.903216
+2018-01-28 22:45:27 F2 score after applying tresholds is 0.929523
+2018-01-28 22:45:28 Testing transformation 1/6
+2018-01-28 22:45:28 Testing
+2018-01-28 22:45:28 Traceback (most recent call last):
+  File "train.py", line 501, in main
+    tr.run(config)
+  File "train.py", line 229, in run
+    self.test_and_submit(config, val_loader)
+  File "train.py", line 414, in test_and_submit
+    names, final_results = self.test_model(config)
+  File "train.py", line 375, in test_model
+    names, crop_results = boilerplate.test_model(test_loader, self._model, activation=torch.sigmoid)
+  File "/home/rajanie007/dl4cv/planet/boilerplate.py", line 307, in test_model
+    for i, (input, name_batch) in enumerate(test_loader):
+  File "/home/rajanie007/miniconda2/lib/python2.7/site-packages/torch/utils/data/dataloader.py", line 210, in __next__
+    return self._process_next_batch(batch)
+  File "/home/rajanie007/miniconda2/lib/python2.7/site-packages/torch/utils/data/dataloader.py", line 230, in _process_next_batch
+    raise batch.exc_type(batch.exc_msg)
+IOError: Traceback (most recent call last):
+  File "/home/rajanie007/miniconda2/lib/python2.7/site-packages/torch/utils/data/dataloader.py", line 42, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/rajanie007/dl4cv/planet/folder.py", line 158, in __getitem__
+    img = self.loader(os.path.join(self.root, path))
+  File "/home/rajanie007/dl4cv/planet/folder.py", line 57, in mix_loader
+    jpg_img = np.array(default_loader(jpg_path))
+  File "build/bdist.linux-x86_64/egg/torchvision/datasets/folder.py", line 69, in default_loader
+    return pil_loader(path)
+  File "build/bdist.linux-x86_64/egg/torchvision/datasets/folder.py", line 50, in pil_loader
+    with open(path, 'rb') as f:
+IOError: [Errno 2] No such file or directory: '/home/chinmay/code/pytorch-kaggle-amazon-space/data/test-jpg/file_4609.jpg'
+
+2018-01-29 12:13:19 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'mix_index_nozoom_256', 'epoch': 1, 'lr': 0.3, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'mix', 'batch_size': 96, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'alexnet'}
+2018-01-29 12:13:19 Loading train/val split from file
+2018-01-29 12:13:20 Starting learning single model
+2018-01-29 12:13:20 Initing model
+2018-01-29 12:13:20 Traceback (most recent call last):
+  File "train.py", line 501, in main
+    tr.run(config)
+  File "train.py", line 228, in run
+    self.train_single_model(config, train_loader, val_loader)
+  File "train.py", line 199, in train_single_model
+    self._init_model()
+  File "train.py", line 62, in _init_model
+    model, layers = self.__model_func(num_classes=NUM_CLASSES, pretrained=self.__pre_trained)
+2018-01-30 23:24:22 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'nozoom_256', 'epoch': 1, 'lr': 0.3, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'jpg', 'batch_size': 96, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'resnet18'}
+2018-01-30 23:24:22 Loading train/val split from file
+2018-01-30 23:24:23 Starting learning single model
+2018-01-30 23:24:23 Initing model
+2018-01-30 23:24:27 Learning exact layers, number=3
+2018-01-30 23:24:27 Layer=0, lr=0.30000
+2018-01-30 23:24:27 Layer=1, lr=0.30000
+2018-01-30 23:24:27 Layer=2, lr=0.30000
+2018-01-30 23:24:27 Loss is MultiLabelSoftMarginLoss without weights
+2018-01-30 23:24:27 Epoch 0
+2018-01-30 23:25:30 Epoch: [0][50/338]	Time 1.282 (1.234)	Data 0.965 (0.719)	Accuracy 0.0000 (0.0000)	Loss 0.2096 (0.2549)	
+2018-01-30 23:26:24 Epoch: [0][100/338]	Time 0.692 (1.165)	Data 0.377 (0.723)	Accuracy 0.0000 (0.0000)	Loss 0.2300 (0.2314)	
+2018-01-30 23:27:19 Epoch: [0][150/338]	Time 0.638 (1.143)	Data 0.309 (0.719)	Accuracy 0.0000 (0.0000)	Loss 0.2378 (0.2206)	
+2018-01-30 23:28:13 Epoch: [0][200/338]	Time 0.648 (1.126)	Data 0.020 (0.693)	Accuracy 0.0000 (0.0000)	Loss 0.1756 (0.2132)	
+2018-01-30 23:29:08 Epoch: [0][250/338]	Time 1.532 (1.120)	Data 1.219 (0.690)	Accuracy 0.0000 (0.0000)	Loss 0.1820 (0.2083)	
+2018-01-30 23:30:01 Epoch: [0][300/338]	Time 1.399 (1.112)	Data 1.083 (0.676)	Accuracy 0.0000 (0.0000)	Loss 0.2045 (0.2025)	
+2018-01-30 23:30:47 Epoch: [0][337/338]	Time 5.499 (1.125)	Data 1.076 (0.684)	Accuracy 0.0000 (0.0000)	Loss 0.1751 (0.1990)	
+2018-01-30 23:30:47 Validating model
+2018-01-30 23:32:10 Test: [84/84]	Time 1.712 (0.987)	Loss 0.19607	F2: 0.743857434773	
+2018-01-30 23:32:10 Current model is best by val score 0.19607 < -1.00000
+2018-01-30 23:32:10 early_stop_counter: 0
+2018-01-30 23:32:12 Initing model
+2018-01-30 23:32:13 Loaded best model /home/rajanie007/dl4cv/results/model_best.pth.tar, arch=resnet18
+2018-01-30 23:32:13 Estimating thresholds
+2018-01-30 23:32:32 	 slice=0, name=agriculture, best_threshold=0.120, metric=0.8118
+2018-01-30 23:32:33 	 slice=1, name=artisinal_mine, best_threshold=0.500, metric=0.8127
+2018-01-30 23:32:35 	 slice=2, name=bare_ground, best_threshold=0.340, metric=0.8129
+2018-01-30 23:32:36 	 slice=3, name=blooming, best_threshold=0.050, metric=0.8129
+2018-01-30 23:32:37 	 slice=4, name=blow_down, best_threshold=0.020, metric=0.8129
+2018-01-30 23:32:39 	 slice=5, name=clear, best_threshold=0.430, metric=0.8141
+2018-01-30 23:32:40 	 slice=6, name=cloudy, best_threshold=0.110, metric=0.8149
+2018-01-30 23:32:42 	 slice=7, name=conventional_mine, best_threshold=0.090, metric=0.8149
+2018-01-30 23:32:43 	 slice=8, name=cultivation, best_threshold=0.220, metric=0.8153
+2018-01-30 23:32:45 	 slice=9, name=habitation, best_threshold=0.490, metric=0.8186
+2018-01-30 23:32:46 	 slice=10, name=haze, best_threshold=0.040, metric=0.8237
+2018-01-30 23:32:47 	 slice=11, name=partly_cloudy, best_threshold=0.080, metric=0.8284
+2018-01-30 23:32:49 	 slice=12, name=primary, best_threshold=0.040, metric=0.8294
+2018-01-30 23:32:50 	 slice=13, name=road, best_threshold=0.410, metric=0.8299
+2018-01-30 23:32:52 	 slice=14, name=selective_logging, best_threshold=0.080, metric=0.8299
+2018-01-30 23:32:53 	 slice=15, name=slash_burn, best_threshold=0.030, metric=0.8299
+2018-01-30 23:32:54 	 slice=16, name=water, best_threshold=0.280, metric=0.8318
+2018-01-30 23:32:54 Precision/recall for each category
+2018-01-30 23:32:54 	 name=agriculture, count=12315, pre=0.4666, recall=0.8918
+2018-01-30 23:32:54 	 name=artisinal_mine, count=339, pre=0.4750, recall=0.2676
+2018-01-30 23:32:54 	 name=bare_ground, count=862, pre=0.3968, recall=0.1381
+2018-01-30 23:32:54 	 name=blooming, count=332, pre=0.0000, recall=0.0000
+2018-01-30 23:32:54 	 name=blow_down, count=101, pre=0.0000, recall=0.0000
+2018-01-30 23:32:54 	 name=clear, count=28431, pre=0.8377, recall=0.9920
+2018-01-30 23:32:54 	 name=cloudy, count=2089, pre=0.4045, recall=0.9236
+2018-01-30 23:32:54 	 name=conventional_mine, count=100, pre=0.0000, recall=0.0000
+2018-01-30 23:32:54 	 name=cultivation, count=4547, pre=0.2461, recall=0.3386
+2018-01-30 23:32:54 	 name=habitation, count=3660, pre=0.3718, recall=0.6400
+2018-01-30 23:32:54 	 name=haze, count=2697, pre=0.4785, recall=0.7673
+2018-01-30 23:32:54 	 name=partly_cloudy, count=7261, pre=0.5745, recall=0.7803
+2018-01-30 23:32:54 	 name=primary, count=37513, pre=0.9380, recall=0.9981
+2018-01-30 23:32:54 	 name=road, count=8071, pre=0.4346, recall=0.7569
+2018-01-30 23:32:54 	 name=selective_logging, count=340, pre=0.0000, recall=0.0000
+2018-01-30 23:32:54 	 name=slash_burn, count=209, pre=0.0000, recall=0.0000
+2018-01-30 23:32:54 	 name=water, count=7411, pre=0.3097, recall=0.7630
+2018-01-30 23:33:02 F2 score before applying tresholds is 0.779262
+2018-01-30 23:33:02 F2 score after applying tresholds is 0.831775
+2018-01-30 23:33:02 Testing transformation 1/6
+2018-01-30 23:33:02 Testing
+2018-01-30 23:34:20 Batch 20
+2018-01-30 23:35:28 Batch 40
+2018-01-30 23:36:37 Batch 60
+2018-01-30 23:37:43 Batch 80
+2018-01-30 23:38:49 Batch 100
+2018-01-30 23:39:54 Batch 120
+2018-01-30 23:40:15 Testing transformation 2/6
+2018-01-30 23:40:15 Testing
+2018-01-30 23:40:31 Batch 20
+2018-01-30 23:40:44 Batch 40
+2018-01-30 23:40:58 Batch 60
+2018-01-30 23:41:11 Batch 80
+2018-01-30 23:41:25 Batch 100
+2018-01-30 23:41:38 Batch 120
+2018-01-30 23:41:42 Testing transformation 3/6
+2018-01-30 23:41:42 Testing
+2018-01-30 23:41:58 Batch 20
+2018-01-30 23:42:11 Batch 40
+2018-01-30 23:42:25 Batch 60
+2018-01-30 23:42:38 Batch 80
+2018-01-30 23:42:52 Batch 100
+2018-01-30 23:43:05 Batch 120
+2018-01-30 23:43:09 Testing transformation 4/6
+2018-01-30 23:43:09 Testing
+2018-01-30 23:43:25 Batch 20
+2018-01-30 23:43:38 Batch 40
+2018-01-30 23:43:52 Batch 60
+2018-01-30 23:44:05 Batch 80
+2018-01-30 23:44:19 Batch 100
+2018-01-30 23:44:32 Batch 120
+2018-01-30 23:44:36 Testing transformation 5/6
+2018-01-30 23:44:36 Testing
+2018-01-30 23:44:52 Batch 20
+2018-01-30 23:45:06 Batch 40
+2018-01-30 23:45:19 Batch 60
+2018-01-30 23:45:32 Batch 80
+2018-01-30 23:45:46 Batch 100
+2018-01-30 23:45:59 Batch 120
+2018-01-30 23:46:03 Testing transformation 6/6
+2018-01-30 23:46:03 Testing
+2018-01-30 23:46:19 Batch 20
+2018-01-30 23:46:32 Batch 40
+2018-01-30 23:46:46 Batch 60
+2018-01-30 23:46:59 Batch 80
+2018-01-30 23:47:13 Batch 100
+2018-01-30 23:47:26 Batch 120
+2018-01-30 23:47:32 {0: 'agriculture', 1: 'artisinal_mine', 2: 'bare_ground', 3: 'blooming', 4: 'blow_down', 5: 'clear', 6: 'cloudy', 7: 'conventional_mine', 8: 'cultivation', 9: 'habitation', 10: 'haze', 11: 'partly_cloudy', 12: 'primary', 13: 'road', 14: 'selective_logging', 15: 'slash_burn', 16: 'water'}
+
+
+2018-01-31 17:01:16 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'imagenet_like', 'epoch': 1, 'lr': 0.3, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'jpg', 'batch_size': 96, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'alexnet'}
+2018-01-31 17:01:16 Loading train/val split from file
+2018-01-31 17:01:17 Starting learning single model
+2018-01-31 17:01:17 Initing model
+2018-01-31 17:01:21 Learning exact layers, number=2
+2018-01-31 17:01:21 Layer=0, lr=0.30000
+2018-01-31 17:01:21 Layer=1, lr=0.03000
+2018-01-31 17:01:21 Loss is MultiLabelSoftMarginLoss without weights
+2018-01-31 17:01:21 Epoch 0
+2018-01-31 17:03:09 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'imagenet_like', 'epoch': 1, 'lr': 0.3, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'jpg', 'batch_size': 96, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'alexnet'}
+2018-01-31 17:03:09 Loading train/val split from file
+2018-01-31 17:03:11 Starting learning single model
+2018-01-31 17:03:11 Initing model
+2018-01-31 17:03:15 Learning exact layers, number=2
+2018-01-31 17:03:15 Layer=0, lr=0.30000
+2018-01-31 17:03:15 Layer=1, lr=0.03000
+2018-01-31 17:03:15 Loss is MultiLabelSoftMarginLoss without weights
+2018-01-31 17:03:15 Epoch 0
+2018-01-31 17:04:09 Epoch: [0][50/338]	Time 1.512 (1.069)	Data 1.451 (0.941)	Accuracy 0.0000 (0.0000)	Loss 0.1894 (0.2549)	
+2018-01-31 17:04:59 Epoch: [0][100/338]	Time 1.106 (1.038)	Data 1.044 (0.938)	Accuracy 0.0000 (0.0000)	Loss 0.1776 (0.2252)	
+2018-01-31 17:05:51 Epoch: [0][150/338]	Time 1.281 (1.034)	Data 1.220 (0.947)	Accuracy 0.0000 (0.0000)	Loss 0.1539 (0.2103)	
+2018-01-31 17:06:42 Epoch: [0][200/338]	Time 0.150 (1.031)	Data 0.000 (0.947)	Accuracy 0.0000 (0.0000)	Loss 0.2201 (0.2024)	
+2018-01-31 17:07:34 Epoch: [0][250/338]	Time 0.845 (1.032)	Data 0.783 (0.952)	Accuracy 0.0000 (0.0000)	Loss 0.1762 (0.1963)	
+2018-01-31 17:08:27 Epoch: [0][300/338]	Time 0.150 (1.037)	Data 0.000 (0.958)	Accuracy 0.0000 (0.0000)	Loss 0.1989 (0.1925)	
+2018-01-31 17:09:07 Epoch: [0][337/338]	Time 2.106 (1.044)	Data 0.147 (0.960)	Accuracy 0.0000 (0.0000)	Loss 0.1811 (0.1899)	
+2018-01-31 17:09:07 Validating model
+2018-01-31 17:10:33 Test: [84/84]	Time 1.512 (1.021)	Loss 0.14054	F2: 0.798035219619	
+2018-01-31 17:10:33 Current model is best by val score 0.14054 < -1.00000
+2018-01-31 17:10:33 early_stop_counter: 0
+2018-01-31 17:10:39 Initing model
+2018-01-31 17:10:41 Loaded best model /home/rajanie007/dl4cv/results/model_best.pth.tar, arch=alexnet
+2018-01-31 17:10:41 Estimating thresholds
+2018-01-31 17:10:56 	 slice=0, name=agriculture, best_threshold=0.220, metric=0.8751
+2018-01-31 17:10:57 	 slice=1, name=artisinal_mine, best_threshold=0.140, metric=0.8752
+2018-01-31 17:10:58 	 slice=2, name=bare_ground, best_threshold=0.210, metric=0.8752
+2018-01-31 17:11:00 	 slice=3, name=blooming, best_threshold=0.060, metric=0.8752
+2018-01-31 17:11:01 	 slice=4, name=blow_down, best_threshold=0.040, metric=0.8752
+2018-01-31 17:11:02 	 slice=5, name=clear, best_threshold=0.280, metric=0.8754
+2018-01-31 17:11:04 	 slice=6, name=cloudy, best_threshold=0.050, metric=0.8772
+2018-01-31 17:11:05 	 slice=7, name=conventional_mine, best_threshold=0.070, metric=0.8772
+2018-01-31 17:11:07 	 slice=8, name=cultivation, best_threshold=0.200, metric=0.8772
+2018-01-31 17:11:08 	 slice=9, name=habitation, best_threshold=0.270, metric=0.8776
+2018-01-31 17:11:09 	 slice=10, name=haze, best_threshold=0.120, metric=0.8785
+2018-01-31 17:11:11 	 slice=11, name=partly_cloudy, best_threshold=0.160, metric=0.8790
+2018-01-31 17:11:12 	 slice=12, name=primary, best_threshold=0.260, metric=0.8793
+2018-01-31 17:11:13 	 slice=13, name=road, best_threshold=0.280, metric=0.8798
+2018-01-31 17:11:15 	 slice=14, name=selective_logging, best_threshold=0.110, metric=0.8798
+2018-01-31 17:11:16 	 slice=15, name=slash_burn, best_threshold=0.050, metric=0.8798
+2018-01-31 17:11:17 	 slice=16, name=water, best_threshold=0.230, metric=0.8801
+2018-01-31 17:11:17 Precision/recall for each category
+2018-01-31 17:11:17 	 name=agriculture, count=12315, pre=0.6332, recall=0.9045
+2018-01-31 17:11:17 	 name=artisinal_mine, count=339, pre=0.4430, recall=0.4930
+2018-01-31 17:11:17 	 name=bare_ground, count=862, pre=0.4098, recall=0.1381
+2018-01-31 17:11:17 	 name=blooming, count=332, pre=0.0000, recall=0.0000
+2018-01-31 17:11:17 	 name=blow_down, count=101, pre=0.0000, recall=0.0000
+2018-01-31 17:11:17 	 name=clear, count=28431, pre=0.8873, recall=0.9911
+2018-01-31 17:11:17 	 name=cloudy, count=2089, pre=0.5325, recall=0.9483
+2018-01-31 17:11:17 	 name=conventional_mine, count=100, pre=0.0000, recall=0.0000
+2018-01-31 17:11:17 	 name=cultivation, count=4547, pre=0.3629, recall=0.6070
+2018-01-31 17:11:17 	 name=habitation, count=3660, pre=0.4030, recall=0.7531
+2018-01-31 17:11:17 	 name=haze, count=2697, pre=0.5374, recall=0.7455
+2018-01-31 17:11:17 	 name=partly_cloudy, count=7261, pre=0.8235, recall=0.8643
+2018-01-31 17:11:17 	 name=primary, count=37513, pre=0.9535, recall=0.9953
+2018-01-31 17:11:17 	 name=road, count=8071, pre=0.5439, recall=0.8747
+2018-01-31 17:11:17 	 name=selective_logging, count=340, pre=0.0000, recall=0.0000
+2018-01-31 17:11:17 	 name=slash_burn, count=209, pre=0.0000, recall=0.0000
+2018-01-31 17:11:17 	 name=water, count=7411, pre=0.3814, recall=0.7878
+2018-01-31 17:11:25 F2 score before applying tresholds is 0.840322
+2018-01-31 17:11:25 F2 score after applying tresholds is 0.880086
+2018-01-31 17:11:25 Testing transformation 1/10
+2018-01-31 17:11:25 Testing
+2018-01-31 17:12:39 Batch 20
+2018-01-31 17:13:43 Batch 40
+2018-01-31 17:14:50 Batch 60
+2018-01-31 17:15:56 Batch 80
+2018-01-31 17:17:03 Batch 100
+2018-01-31 17:18:11 Batch 120
+2018-01-31 17:18:32 Testing transformation 2/10
+2018-01-31 17:18:32 Testing
+2018-01-31 17:18:43 Batch 20
+2018-01-31 17:18:54 Batch 40
+2018-01-31 17:19:04 Batch 60
+2018-01-31 17:19:14 Batch 80
+2018-01-31 17:19:25 Batch 100
+2018-01-31 17:19:35 Batch 120
+2018-01-31 17:19:38 Testing transformation 3/10
+2018-01-31 17:19:38 Testing
+2018-01-31 17:19:50 Batch 20
+2018-01-31 17:20:00 Batch 40
+2018-01-31 17:20:10 Batch 60
+2018-01-31 17:20:20 Batch 80
+2018-01-31 17:20:30 Batch 100
+2018-01-31 17:20:40 Batch 120
+2018-01-31 17:20:43 Testing transformation 4/10
+2018-01-31 17:20:43 Testing
+2018-01-31 17:20:55 Batch 20
+2018-01-31 17:21:05 Batch 40
+2018-01-31 17:21:15 Batch 60
+2018-01-31 17:21:25 Batch 80
+2018-01-31 17:21:36 Batch 100
+2018-01-31 17:21:46 Batch 120
+2018-01-31 17:21:49 Testing transformation 5/10
+2018-01-31 17:21:49 Testing
+2018-01-31 17:22:01 Batch 20
+2018-01-31 17:22:11 Batch 40
+2018-01-31 17:22:21 Batch 60
+2018-01-31 17:22:31 Batch 80
+2018-01-31 17:22:42 Batch 100
+2018-01-31 17:22:52 Batch 120
+2018-01-31 17:22:55 Testing transformation 6/10
+2018-01-31 17:22:55 Testing
+2018-01-31 17:23:07 Batch 20
+2018-01-31 17:23:18 Batch 40
+2018-01-31 17:23:28 Batch 60
+2018-01-31 17:23:39 Batch 80
+2018-01-31 17:23:50 Batch 100
+2018-01-31 17:24:01 Batch 120
+2018-01-31 17:24:04 Testing transformation 7/10
+2018-01-31 17:24:04 Testing
+2018-01-31 17:24:16 Batch 20
+2018-01-31 17:24:26 Batch 40
+2018-01-31 17:24:37 Batch 60
+2018-01-31 17:24:48 Batch 80
+2018-01-31 17:24:58 Batch 100
+2018-01-31 17:25:09 Batch 120
+2018-01-31 17:25:12 Testing transformation 8/10
+2018-01-31 17:25:12 Testing
+2018-01-31 17:25:24 Batch 20
+2018-01-31 17:25:35 Batch 40
+2018-01-31 17:25:45 Batch 60
+2018-01-31 17:25:56 Batch 80
+2018-01-31 17:26:07 Batch 100
+2018-01-31 17:26:17 Batch 120
+2018-01-31 17:26:20 Testing transformation 9/10
+2018-01-31 17:26:20 Testing
+2018-01-31 17:26:32 Batch 20
+2018-01-31 17:26:43 Batch 40
+2018-01-31 17:26:53 Batch 60
+2018-01-31 17:27:03 Batch 80
+2018-01-31 17:27:14 Batch 100
+2018-01-31 17:27:24 Batch 120
+2018-01-31 17:27:27 Testing transformation 10/10
+2018-01-31 17:27:27 Testing
+2018-01-31 17:27:39 Batch 20
+2018-01-31 17:27:50 Batch 40
+2018-01-31 17:28:00 Batch 60
+2018-01-31 17:28:11 Batch 80
+2018-01-31 17:28:22 Batch 100
+2018-01-31 17:28:32 Batch 120
+2018-01-31 17:28:37 {0: 'agriculture', 1: 'artisinal_mine', 2: 'bare_ground', 3: 'blooming', 4: 'blow_down', 5: 'clear', 6: 'cloudy', 7: 'conventional_mine', 8: 'cultivation', 9: 'habitation', 10: 'haze', 11: 'partly_cloudy', 12: 'primary', 13: 'road', 14: 'selective_logging', 15: 'slash_burn', 16: 'water'}
+
+
+2018-01-31 20:11:16 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'imagenet_like', 'epoch': 10, 'lr': 0.2, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'jpg', 'batch_size': 96, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'alexnet'}
+2018-01-31 20:11:16 Loading train/val split from file
+2018-01-31 20:11:17 Starting learning single model
+2018-01-31 20:11:17 Initing model
+2018-01-31 20:11:22 Learning exact layers, number=2
+2018-01-31 20:11:22 Layer=0, lr=0.20000
+2018-01-31 20:11:22 Layer=1, lr=0.02000
+2018-01-31 20:11:22 Loss is MultiLabelSoftMarginLoss without weights
+2018-01-31 20:11:22 Epoch 0
+2018-01-31 20:11:38 Epoch: [0][50/338]	Time 0.146 (0.324)	Data 0.084 (0.194)	Accuracy 0.0000 (0.0000)	Loss 0.2037 (0.2416)	
+2018-01-31 20:11:52 Epoch: [0][100/338]	Time 0.238 (0.302)	Data 0.178 (0.206)	Accuracy 0.0000 (0.0000)	Loss 0.1952 (0.2155)	
+2018-01-31 20:12:06 Epoch: [0][150/338]	Time 0.173 (0.293)	Data 0.113 (0.210)	Accuracy 0.0000 (0.0000)	Loss 0.1477 (0.2015)	
+2018-01-31 20:12:20 Epoch: [0][200/338]	Time 0.148 (0.289)	Data 0.088 (0.209)	Accuracy 0.0000 (0.0000)	Loss 0.1545 (0.1935)	
+2018-01-31 20:12:33 Epoch: [0][250/338]	Time 0.205 (0.287)	Data 0.145 (0.211)	Accuracy 0.0000 (0.0000)	Loss 0.1439 (0.1877)	
+2018-01-31 20:12:47 Epoch: [0][300/338]	Time 0.376 (0.286)	Data 0.315 (0.212)	Accuracy 0.0000 (0.0000)	Loss 0.1624 (0.1841)	
+2018-01-31 20:12:59 Epoch: [0][337/338]	Time 2.072 (0.290)	Data 0.166 (0.212)	Accuracy 0.0000 (0.0000)	Loss 0.1790 (0.1825)	
+2018-01-31 20:12:59 Validating model
+2018-01-31 20:13:13 Test: [84/84]	Time 0.880 (0.165)	Loss 0.14387	F2: 0.780786554088	
+2018-01-31 20:13:13 Current model is best by val score 0.14387 < -1.00000
+2018-01-31 20:13:13 early_stop_counter: 0
+2018-01-31 20:13:19 Epoch 1
+2018-01-31 20:13:34 Epoch: [1][50/338]	Time 0.406 (0.285)	Data 0.346 (0.184)	Accuracy 0.0000 (0.0000)	Loss 0.1675 (0.1614)	
+2018-01-31 20:13:48 Epoch: [1][100/338]	Time 0.150 (0.280)	Data 0.089 (0.193)	Accuracy 0.0000 (0.0000)	Loss 0.1512 (0.1591)	
+2018-01-31 20:14:01 Epoch: [1][150/338]	Time 0.249 (0.279)	Data 0.189 (0.201)	Accuracy 0.0000 (0.0000)	Loss 0.1683 (0.1569)	
+2018-01-31 20:14:15 Epoch: [1][200/338]	Time 0.314 (0.279)	Data 0.253 (0.205)	Accuracy 0.0000 (0.0000)	Loss 0.1617 (0.1568)	
+2018-01-31 20:14:29 Epoch: [1][250/338]	Time 0.431 (0.279)	Data 0.371 (0.207)	Accuracy 0.0000 (0.0000)	Loss 0.1401 (0.1564)	
+2018-01-31 20:14:43 Epoch: [1][300/338]	Time 0.388 (0.279)	Data 0.327 (0.205)	Accuracy 0.0000 (0.0000)	Loss 0.1308 (0.1558)	
+2018-01-31 20:14:53 Epoch: [1][337/338]	Time 0.140 (0.278)	Data 0.000 (0.203)	Accuracy 0.0000 (0.0000)	Loss 0.1790 (0.1555)	
+2018-01-31 20:14:53 Validating model
+2018-01-31 20:15:06 Test: [84/84]	Time 0.066 (0.156)	Loss 0.12694	F2: 0.807766355135	
+2018-01-31 20:15:06 Current model is best by val score 0.12694 < 0.14387
+2018-01-31 20:15:06 early_stop_counter: 0
+2018-01-31 20:15:12 Epoch 2
+2018-01-31 20:15:27 Epoch: [2][50/338]	Time 0.148 (0.288)	Data 0.000 (0.214)	Accuracy 0.0000 (0.0000)	Loss 0.1400 (0.1508)	
+2018-01-31 20:15:41 Epoch: [2][100/338]	Time 0.384 (0.283)	Data 0.324 (0.206)	Accuracy 0.0000 (0.0000)	Loss 0.1310 (0.1492)	
+2018-01-31 20:15:55 Epoch: [2][150/338]	Time 0.385 (0.285)	Data 0.324 (0.209)	Accuracy 0.0000 (0.0000)	Loss 0.1575 (0.1491)	
+2018-01-31 20:16:09 Epoch: [2][200/338]	Time 0.153 (0.282)	Data 0.093 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1567 (0.1492)	
+2018-01-31 20:16:23 Epoch: [2][250/338]	Time 0.257 (0.281)	Data 0.196 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1525 (0.1495)	
+2018-01-31 20:16:37 Epoch: [2][300/338]	Time 0.146 (0.281)	Data 0.080 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1944 (0.1496)	
+2018-01-31 20:16:47 Epoch: [2][337/338]	Time 0.284 (0.281)	Data 0.232 (0.209)	Accuracy 0.0000 (0.0000)	Loss 0.1917 (0.1490)	
+2018-01-31 20:16:47 Validating model
+2018-01-31 20:17:00 Test: [84/84]	Time 0.050 (0.155)	Loss 0.12014	F2: 0.829041029489	
+2018-01-31 20:17:00 Current model is best by val score 0.12014 < 0.12694
+2018-01-31 20:17:00 early_stop_counter: 0
+2018-01-31 20:17:06 Epoch 3
+2018-01-31 20:17:21 Epoch: [3][50/338]	Time 0.381 (0.292)	Data 0.320 (0.195)	Accuracy 0.0000 (0.0000)	Loss 0.1242 (0.1439)	
+2018-01-31 20:17:35 Epoch: [3][100/338]	Time 0.267 (0.283)	Data 0.207 (0.204)	Accuracy 0.0000 (0.0000)	Loss 0.1592 (0.1457)	
+2018-01-31 20:17:49 Epoch: [3][150/338]	Time 0.146 (0.283)	Data 0.000 (0.202)	Accuracy 0.0000 (0.0000)	Loss 0.1538 (0.1452)	
+2018-01-31 20:18:03 Epoch: [3][200/338]	Time 0.150 (0.283)	Data 0.091 (0.201)	Accuracy 0.0000 (0.0000)	Loss 0.1298 (0.1459)	
+2018-01-31 20:18:17 Epoch: [3][250/338]	Time 0.177 (0.282)	Data 0.117 (0.200)	Accuracy 0.0000 (0.0000)	Loss 0.1279 (0.1453)	
+2018-01-31 20:18:31 Epoch: [3][300/338]	Time 0.146 (0.282)	Data 0.009 (0.198)	Accuracy 0.0000 (0.0000)	Loss 0.1395 (0.1452)	
+2018-01-31 20:18:41 Epoch: [3][337/338]	Time 0.301 (0.282)	Data 0.249 (0.200)	Accuracy 0.0000 (0.0000)	Loss 0.1308 (0.1454)	
+2018-01-31 20:18:41 Validating model
+2018-01-31 20:18:55 Test: [84/84]	Time 0.050 (0.157)	Loss 0.12126	F2: 0.816575570684	
+2018-01-31 20:18:55 early_stop_counter: 1
+2018-01-31 20:18:58 Epoch 4
+2018-01-31 20:19:12 Epoch: [4][50/338]	Time 0.194 (0.287)	Data 0.133 (0.214)	Accuracy 0.0000 (0.0000)	Loss 0.1358 (0.1405)	
+2018-01-31 20:19:26 Epoch: [4][100/338]	Time 0.233 (0.283)	Data 0.173 (0.216)	Accuracy 0.0000 (0.0000)	Loss 0.1416 (0.1410)	
+2018-01-31 20:19:40 Epoch: [4][150/338]	Time 0.148 (0.282)	Data 0.065 (0.212)	Accuracy 0.0000 (0.0000)	Loss 0.1522 (0.1411)	
+2018-01-31 20:19:55 Epoch: [4][200/338]	Time 0.431 (0.284)	Data 0.371 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1470 (0.1420)	
+2018-01-31 20:20:08 Epoch: [4][250/338]	Time 0.385 (0.282)	Data 0.325 (0.201)	Accuracy 0.0000 (0.0000)	Loss 0.1140 (0.1416)	
+2018-01-31 20:20:22 Epoch: [4][300/338]	Time 0.152 (0.281)	Data 0.091 (0.203)	Accuracy 0.0000 (0.0000)	Loss 0.1516 (0.1418)	
+2018-01-31 20:20:33 Epoch: [4][337/338]	Time 0.255 (0.282)	Data 0.203 (0.203)	Accuracy 0.0000 (0.0000)	Loss 0.1228 (0.1418)	
+2018-01-31 20:20:33 Validating model
+2018-01-31 20:20:46 Test: [84/84]	Time 0.115 (0.156)	Loss 0.11789	F2: 0.830532214745	
+2018-01-31 20:20:46 Current model is best by val score 0.11789 < 0.12014
+2018-01-31 20:20:46 early_stop_counter: 0
+2018-01-31 20:20:52 Epoch 5
+2018-01-31 20:21:07 Epoch: [5][50/338]	Time 0.310 (0.290)	Data 0.249 (0.207)	Accuracy 0.0000 (0.0000)	Loss 0.0992 (0.1416)	
+2018-01-31 20:21:21 Epoch: [5][100/338]	Time 0.392 (0.287)	Data 0.332 (0.197)	Accuracy 0.0000 (0.0000)	Loss 0.1278 (0.1416)	
+2018-01-31 20:21:35 Epoch: [5][150/338]	Time 0.403 (0.285)	Data 0.342 (0.195)	Accuracy 0.0000 (0.0000)	Loss 0.1368 (0.1406)	
+2018-01-31 20:21:49 Epoch: [5][200/338]	Time 0.432 (0.285)	Data 0.371 (0.198)	Accuracy 0.0000 (0.0000)	Loss 0.1551 (0.1402)	
+2018-01-31 20:22:04 Epoch: [5][250/338]	Time 0.441 (0.285)	Data 0.380 (0.202)	Accuracy 0.0000 (0.0000)	Loss 0.1156 (0.1402)	
+2018-01-31 20:22:17 Epoch: [5][300/338]	Time 0.377 (0.284)	Data 0.317 (0.200)	Accuracy 0.0000 (0.0000)	Loss 0.1269 (0.1403)	
+2018-01-31 20:22:28 Epoch: [5][337/338]	Time 0.258 (0.283)	Data 0.207 (0.202)	Accuracy 0.0000 (0.0000)	Loss 0.1262 (0.1398)	
+2018-01-31 20:22:28 Validating model
+2018-01-31 20:22:41 Test: [84/84]	Time 0.050 (0.154)	Loss 0.11784	F2: 0.837031544158	
+2018-01-31 20:22:41 Current model is best by val score 0.11784 < 0.11789
+2018-01-31 20:22:41 early_stop_counter: 0
+2018-01-31 20:22:47 Epoch 6
+2018-01-31 20:23:01 Epoch: [6][50/338]	Time 0.449 (0.288)	Data 0.388 (0.211)	Accuracy 0.0000 (0.0000)	Loss 0.1411 (0.1402)	
+2018-01-31 20:23:15 Epoch: [6][100/338]	Time 0.366 (0.286)	Data 0.306 (0.212)	Accuracy 0.0000 (0.0000)	Loss 0.1240 (0.1386)	
+2018-01-31 20:23:30 Epoch: [6][150/338]	Time 0.420 (0.284)	Data 0.360 (0.212)	Accuracy 0.0000 (0.0000)	Loss 0.1399 (0.1370)	
+2018-01-31 20:23:44 Epoch: [6][200/338]	Time 0.416 (0.283)	Data 0.356 (0.206)	Accuracy 0.0000 (0.0000)	Loss 0.1304 (0.1378)	
+2018-01-31 20:23:58 Epoch: [6][250/338]	Time 0.424 (0.283)	Data 0.364 (0.204)	Accuracy 0.0000 (0.0000)	Loss 0.1327 (0.1374)	
+2018-01-31 20:24:12 Epoch: [6][300/338]	Time 0.265 (0.283)	Data 0.205 (0.205)	Accuracy 0.0000 (0.0000)	Loss 0.1429 (0.1373)	
+2018-01-31 20:24:22 Epoch: [6][337/338]	Time 0.138 (0.282)	Data 0.063 (0.206)	Accuracy 0.0000 (0.0000)	Loss 0.1571 (0.1373)	
+2018-01-31 20:24:22 Validating model
+2018-01-31 20:24:35 Test: [84/84]	Time 0.050 (0.157)	Loss 0.11537	F2: 0.823166752602	
+2018-01-31 20:24:35 Current model is best by val score 0.11537 < 0.11784
+2018-01-31 20:24:35 early_stop_counter: 0
+2018-01-31 20:24:41 Epoch 7
+2018-01-31 20:24:56 Epoch: [7][50/338]	Time 0.429 (0.297)	Data 0.367 (0.197)	Accuracy 0.0000 (0.0000)	Loss 0.1558 (0.1352)	
+2018-01-31 20:25:10 Epoch: [7][100/338]	Time 0.347 (0.289)	Data 0.287 (0.197)	Accuracy 0.0000 (0.0000)	Loss 0.1731 (0.1375)	
+2018-01-31 20:25:24 Epoch: [7][150/338]	Time 0.157 (0.286)	Data 0.096 (0.205)	Accuracy 0.0000 (0.0000)	Loss 0.1631 (0.1378)	
+2018-01-31 20:25:38 Epoch: [7][200/338]	Time 0.281 (0.286)	Data 0.219 (0.210)	Accuracy 0.0000 (0.0000)	Loss 0.1571 (0.1371)	
+2018-01-31 20:25:53 Epoch: [7][250/338]	Time 0.434 (0.285)	Data 0.373 (0.212)	Accuracy 0.0000 (0.0000)	Loss 0.1460 (0.1366)	
+2018-01-31 20:26:07 Epoch: [7][300/338]	Time 0.377 (0.285)	Data 0.318 (0.209)	Accuracy 0.0000 (0.0000)	Loss 0.1273 (0.1363)	
+2018-01-31 20:26:17 Epoch: [7][337/338]	Time 0.140 (0.284)	Data 0.000 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1274 (0.1369)	
+2018-01-31 20:26:17 Validating model
+2018-01-31 20:26:30 Test: [84/84]	Time 0.132 (0.156)	Loss 0.11344	F2: 0.832045811792	
+2018-01-31 20:26:30 Current model is best by val score 0.11344 < 0.11537
+2018-01-31 20:26:30 early_stop_counter: 0
+2018-01-31 20:26:36 Epoch 8
+2018-01-31 20:26:51 Epoch: [8][50/338]	Time 0.459 (0.296)	Data 0.399 (0.213)	Accuracy 0.0000 (0.0000)	Loss 0.0973 (0.1358)	
+2018-01-31 20:27:05 Epoch: [8][100/338]	Time 0.149 (0.286)	Data 0.024 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1295 (0.1348)	
+2018-01-31 20:27:19 Epoch: [8][150/338]	Time 0.169 (0.286)	Data 0.109 (0.207)	Accuracy 0.0000 (0.0000)	Loss 0.1171 (0.1348)	
+2018-01-31 20:27:34 Epoch: [8][200/338]	Time 0.172 (0.286)	Data 0.112 (0.209)	Accuracy 0.0000 (0.0000)	Loss 0.1469 (0.1350)	
+2018-01-31 20:27:48 Epoch: [8][250/338]	Time 0.196 (0.285)	Data 0.136 (0.207)	Accuracy 0.0000 (0.0000)	Loss 0.1275 (0.1340)	
+2018-01-31 20:28:02 Epoch: [8][300/338]	Time 0.146 (0.285)	Data 0.019 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1185 (0.1337)	
+2018-01-31 20:28:12 Epoch: [8][337/338]	Time 0.210 (0.284)	Data 0.158 (0.208)	Accuracy 0.0000 (0.0000)	Loss 0.1414 (0.1343)	
+2018-01-31 20:28:12 Validating model
+2018-01-31 20:28:25 Test: [84/84]	Time 0.068 (0.156)	Loss 0.11449	F2: 0.81961279333	
+2018-01-31 20:28:25 early_stop_counter: 1
+2018-01-31 20:28:28 Epoch 9
+2018-01-31 20:28:43 Epoch: [9][50/338]	Time 0.379 (0.288)	Data 0.319 (0.202)	Accuracy 0.0000 (0.0000)	Loss 0.1449 (0.1309)	
+2018-01-31 20:28:57 Epoch: [9][100/338]	Time 0.167 (0.281)	Data 0.107 (0.197)	Accuracy 0.0000 (0.0000)	Loss 0.1358 (0.1335)	
+2018-01-31 20:29:11 Epoch: [9][150/338]	Time 0.358 (0.281)	Data 0.297 (0.200)	Accuracy 0.0000 (0.0000)	Loss 0.1024 (0.1330)	
+2018-01-31 20:29:24 Epoch: [9][200/338]	Time 0.218 (0.280)	Data 0.158 (0.203)	Accuracy 0.0000 (0.0000)	Loss 0.1272 (0.1341)	
+2018-01-31 20:29:38 Epoch: [9][250/338]	Time 0.312 (0.280)	Data 0.252 (0.203)	Accuracy 0.0000 (0.0000)	Loss 0.1285 (0.1339)	
+2018-01-31 20:29:52 Epoch: [9][300/338]	Time 0.282 (0.280)	Data 0.222 (0.204)	Accuracy 0.0000 (0.0000)	Loss 0.1396 (0.1329)	
+2018-01-31 20:30:03 Epoch: [9][337/338]	Time 0.199 (0.280)	Data 0.147 (0.204)	Accuracy 0.0000 (0.0000)	Loss 0.1393 (0.1334)	
+2018-01-31 20:30:03 Validating model
+2018-01-31 20:30:16 Test: [84/84]	Time 0.150 (0.156)	Loss 0.10915	F2: 0.839979367256	
+2018-01-31 20:30:16 Current model is best by val score 0.10915 < 0.11344
+2018-01-31 20:30:16 early_stop_counter: 0
+2018-01-31 20:30:22 Initing model
+2018-01-31 20:30:24 Loaded best model /home/rajanie007/dl4cv/results/model_best.pth.tar, arch=alexnet
+2018-01-31 20:30:24 Estimating thresholds
+2018-01-31 20:30:38 	 slice=0, name=agriculture, best_threshold=0.310, metric=0.9035
+2018-01-31 20:30:39 	 slice=1, name=artisinal_mine, best_threshold=0.180, metric=0.9035
+2018-01-31 20:30:41 	 slice=2, name=bare_ground, best_threshold=0.210, metric=0.9035
+2018-01-31 20:30:42 	 slice=3, name=blooming, best_threshold=0.070, metric=0.9036
+2018-01-31 20:30:43 	 slice=4, name=blow_down, best_threshold=0.050, metric=0.9036
+2018-01-31 20:30:45 	 slice=5, name=clear, best_threshold=0.160, metric=0.9038
+2018-01-31 20:30:46 	 slice=6, name=cloudy, best_threshold=0.040, metric=0.9058
+2018-01-31 20:30:47 	 slice=7, name=conventional_mine, best_threshold=0.610, metric=0.9059
+2018-01-31 20:30:49 	 slice=8, name=cultivation, best_threshold=0.290, metric=0.9064
+2018-01-31 20:30:50 	 slice=9, name=habitation, best_threshold=0.230, metric=0.9065
+2018-01-31 20:30:52 	 slice=10, name=haze, best_threshold=0.110, metric=0.9068
+2018-01-31 20:30:53 	 slice=11, name=partly_cloudy, best_threshold=0.190, metric=0.9069
+2018-01-31 20:30:54 	 slice=12, name=primary, best_threshold=0.390, metric=0.9077
+2018-01-31 20:30:56 	 slice=13, name=road, best_threshold=0.270, metric=0.9081
+2018-01-31 20:30:57 	 slice=14, name=selective_logging, best_threshold=0.130, metric=0.9082
+2018-01-31 20:30:58 	 slice=15, name=slash_burn, best_threshold=0.090, metric=0.9082
+2018-01-31 20:31:00 	 slice=16, name=water, best_threshold=0.210, metric=0.9082
+2018-01-31 20:31:00 Precision/recall for each category
+2018-01-31 20:31:00 	 name=agriculture, count=12315, pre=0.7254, recall=0.9151
+2018-01-31 20:31:00 	 name=artisinal_mine, count=339, pre=0.6515, recall=0.6056
+2018-01-31 20:31:00 	 name=bare_ground, count=862, pre=0.3007, recall=0.2376
+2018-01-31 20:31:00 	 name=blooming, count=332, pre=0.2750, recall=0.1719
+2018-01-31 20:31:00 	 name=blow_down, count=101, pre=0.0000, recall=0.0000
+2018-01-31 20:31:00 	 name=clear, count=28431, pre=0.8918, recall=0.9949
+2018-01-31 20:31:00 	 name=cloudy, count=2089, pre=0.5803, recall=0.9877
+2018-01-31 20:31:00 	 name=conventional_mine, count=100, pre=0.7143, recall=0.4762
+2018-01-31 20:31:00 	 name=cultivation, count=4547, pre=0.4830, recall=0.5787
+2018-01-31 20:31:00 	 name=habitation, count=3660, pre=0.5724, recall=0.7310
+2018-01-31 20:31:00 	 name=haze, count=2697, pre=0.5140, recall=0.8364
+2018-01-31 20:31:00 	 name=partly_cloudy, count=7261, pre=0.8220, recall=0.9477
+2018-01-31 20:31:00 	 name=primary, count=37513, pre=0.9642, recall=0.9962
+2018-01-31 20:31:00 	 name=road, count=8071, pre=0.6881, recall=0.8848
+2018-01-31 20:31:00 	 name=selective_logging, count=340, pre=0.3667, recall=0.2973
+2018-01-31 20:31:00 	 name=slash_burn, count=209, pre=0.0000, recall=0.0000
+2018-01-31 20:31:00 	 name=water, count=7411, pre=0.6179, recall=0.7823
+2018-01-31 20:31:08 F2 score before applying tresholds is 0.874748
+2018-01-31 20:31:08 F2 score after applying tresholds is 0.908240
+2018-01-31 20:31:08 Testing transformation 1/10
+2018-01-31 20:31:08 Testing
+2018-01-31 20:31:21 Batch 20
+2018-01-31 20:31:31 Batch 40
+2018-01-31 20:31:41 Batch 60
+2018-01-31 20:31:51 Batch 80
+2018-01-31 20:32:01 Batch 100
+2018-01-31 20:32:11 Batch 120
+2018-01-31 20:32:15 Testing transformation 2/10
+2018-01-31 20:32:15 Testing
+2018-01-31 20:32:26 Batch 20
+2018-01-31 20:32:37 Batch 40
+2018-01-31 20:32:47 Batch 60
+2018-01-31 20:32:57 Batch 80
+2018-01-31 20:33:07 Batch 100
+2018-01-31 20:33:18 Batch 120
+2018-01-31 20:33:21 Testing transformation 3/10
+2018-01-31 20:33:21 Testing
+2018-01-31 20:33:32 Batch 20
+2018-01-31 20:33:43 Batch 40
+2018-01-31 20:33:53 Batch 60
+2018-01-31 20:34:03 Batch 80
+2018-01-31 20:34:13 Batch 100
+2018-01-31 20:34:23 Batch 120
+2018-01-31 20:34:26 Testing transformation 4/10
+2018-01-31 20:34:26 Testing
+2018-01-31 20:34:37 Batch 20
+2018-01-31 20:34:48 Batch 40
+2018-01-31 20:34:58 Batch 60
+2018-01-31 20:35:08 Batch 80
+2018-01-31 20:35:19 Batch 100
+2018-01-31 20:35:29 Batch 120
+2018-01-31 20:35:32 Testing transformation 5/10
+2018-01-31 20:35:32 Testing
+2018-01-31 20:35:44 Batch 20
+2018-01-31 20:35:54 Batch 40
+2018-01-31 20:36:04 Batch 60
+2018-01-31 20:36:14 Batch 80
+2018-01-31 20:36:24 Batch 100
+2018-01-31 20:36:35 Batch 120
+2018-01-31 20:36:38 Testing transformation 6/10
+2018-01-31 20:36:38 Testing
+2018-01-31 20:36:50 Batch 20
+2018-01-31 20:37:00 Batch 40
+2018-01-31 20:37:11 Batch 60
+2018-01-31 20:37:22 Batch 80
+2018-01-31 20:37:33 Batch 100
+2018-01-31 20:37:43 Batch 120
+2018-01-31 20:37:46 Testing transformation 7/10
+2018-01-31 20:37:46 Testing
+2018-01-31 20:37:58 Batch 20
+2018-01-31 20:38:09 Batch 40
+2018-01-31 20:38:20 Batch 60
+2018-01-31 20:38:30 Batch 80
+2018-01-31 20:38:41 Batch 100
+2018-01-31 20:38:51 Batch 120
+2018-01-31 20:38:55 Testing transformation 8/10
+2018-01-31 20:38:55 Testing
+2018-01-31 20:39:07 Batch 20
+2018-01-31 20:39:17 Batch 40
+2018-01-31 20:39:28 Batch 60
+2018-01-31 20:39:39 Batch 80
+2018-01-31 20:39:50 Batch 100
+2018-01-31 20:40:01 Batch 120
+2018-01-31 20:40:04 Testing transformation 9/10
+2018-01-31 20:40:04 Testing
+2018-01-31 20:40:16 Batch 20
+2018-01-31 20:40:27 Batch 40
+2018-01-31 20:40:37 Batch 60
+2018-01-31 20:40:48 Batch 80
+2018-01-31 20:40:58 Batch 100
+2018-01-31 20:41:09 Batch 120
+2018-01-31 20:41:12 Testing transformation 10/10
+2018-01-31 20:41:12 Testing
+2018-01-31 20:41:25 Batch 20
+2018-01-31 20:41:35 Batch 40
+2018-01-31 20:41:46 Batch 60
+2018-01-31 20:41:57 Batch 80
+2018-01-31 20:42:08 Batch 100
+2018-01-31 20:42:18 Batch 120
+2018-01-31 20:42:23 {0: 'agriculture', 1: 'artisinal_mine', 2: 'bare_ground', 3: 'blooming', 4: 'blow_down', 5: 'clear', 6: 'cloudy', 7: 'conventional_mine', 8: 'cultivation', 9: 'habitation', 10: 'haze', 11: 'partly_cloudy', 12: 'primary', 13: 'road', 14: 'selective_logging', 15: 'slash_burn', 16: 'water'}
+
