@@ -229,7 +229,7 @@ def main():
             get_fbeta_x(Y, after_X, [0.5]*NUM_CLASSES)
 
     print 'avg thr', avg_thr
-    out_file = '/home/tyantov/workspace/kaggle-planet/results/avg_subm_blend.csv'
+    out_file = '/home/chinmay/Desktop/TUM/Project-Flie/code-base/pytorch-kaggle-amazon-space/results/avg_subm_blend.csv'
     with open(out_file, 'w') as wf:
         wf.write('image_name,tags\n')
         for i in xrange(len(X_test)):
@@ -244,3 +244,4 @@ def main():
 
 if __name__ == '__main__':
     sys.exit(main())
+
