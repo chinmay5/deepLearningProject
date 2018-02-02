@@ -4,7 +4,7 @@ import torch, torch.nn as nn
 import math, urllib2
 import torch.utils.model_zoo as model_zoo
 import torch.nn.functional as F
-
+from torchvision.models import inception_v3
 from torchvision.models import densenet121, densenet169, densenet201,vgg16,vgg16_bn,vgg19_bn,resnet18
 from tif_model import vgg16_tif
 
@@ -444,6 +444,42 @@ def resnet34_fcbn(num_classes=NUM_CLASSES, embedding_len=256, pretrained=True):
 
     return model, layers
 
+def inception_v3_(num_classes=NUM_CLASSES, pretrained=True):
+    model = inception_v3(pretrained=pretrained)
+    model.AuxLogits.fc = nn.Linear(768,num_classes)
+    model.fc = nn.Linear(2048,num_classes)
+    print(model)
+    layers = [ (model.fc, 1), 
+               (model.AuxLogits.fc, 1),
+               (model.Conv2d_1a_3x3, 0.0001),
+               (model.Conv2d_2a_3x3, 0.0001),
+               (model.Conv2d_2b_3x3, 0.0001),
+               (model.Conv2d_3b_1x1, 0.0001),
+               (model.Conv2d_4a_3x3, 0.0001),
+               (model.Mixed_5b, 0.01),
+               (model.Mixed_5c, 0.01),
+               (model.Mixed_5d, 0.01),
+               (model.Mixed_6a, 0.01),
+               (model.Mixed_6b, 0.01),
+               (model.Mixed_6c, 0.01),
+               (model.Mixed_6d, 0.01),
+               (model.Mixed_6e, 0.01),
+               (model.Mixed_7a, 0.01),
+               (model.Mixed_7b, 0.01),
+               (model.Mixed_7c, 0.01),
+               (model.AuxLogits.conv0, 0.0001),
+               (model.AuxLogits.conv1, 0.0001)]
+    
+    return model, layers
+
+def inception_v3_frozen(num_classes=NUM_CLASSES, pretrained=True):
+    model = inception_v3(pretrained=pretrained)
+    model.AuxLogits.fc = nn.Linear(768,num_classes)
+    model.fc = nn.Linear(2048,num_classes)
+    print(model)
+    layers = [(model.fc, 1),(model.AuxLogits.fc, 1)]
+    
+    return model, layers
 
 def densenet121_(num_classes=NUM_CLASSES, pretrained=True):
     """loss: 0.07939, LB: 0.92758, epoch=38 adaptive LR

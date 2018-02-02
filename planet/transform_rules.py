@@ -34,6 +34,30 @@ def imagenet_like():
 
     return {'train': train_transformations, 'val': val_transformations, 'test': test_transformation}
 
+def zoom_299():
+    train_transformations = transforms.Compose([
+        transforms.RandomSizedCrop(299),
+        transforms.RandomHorizontalFlip(),
+        lambda img: img if random.random() < 0.5 else img.transpose(Image.FLIP_TOP_BOTTOM),
+        transforms.ToTensor(),
+        ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4),
+        normalize,
+    ])
+
+    val_transformations = transforms.Compose([
+        transforms.CenterCrop(299),
+        transforms.ToTensor(),
+        normalize,
+    ])
+
+    test_transformation = transforms.Compose([
+        TenCropPick(299),
+        transforms.ToTensor(),
+        normalize,
+    ])
+
+    return {'train': train_transformations, 'val': val_transformations, 'test': test_transformation}
+
 
 def nozoom_256():
     train_transformations = transforms.Compose([
