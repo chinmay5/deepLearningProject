@@ -11,10 +11,7 @@ import torch, torch.nn as nn
 from torch.nn import functional as F
 from sklearn.model_selection import StratifiedKFold, KFold
 from sklearn.linear_model import LogisticRegression, RidgeClassifier, Ridge
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-from stacked_generalization.lib.stacking import StackedClassifier
+
 
 
 with open(BLACKLIST_FILE) as rf:
@@ -271,22 +268,12 @@ def main():
         #test = np.mean(np.array(test_results), axis=0)
         print 'Opt, thr', opt_thr, class_thresholds
         opt_thresholds.append(opt_thr)
-        #class_result = (test > opt_thr).astype('int')
-        #R[class_idx] = class_result
-        #thrs = optimise_f2_thresholds(Y_valid, res[:, 1], nss)
-        #print thrs
+
     R = R.transpose(1, 0)
     RV = RV.transpose(1, 0)
 
     print fbeta_score(Y_v, (RV > 0.5).astype('int'), 2, average='samples')
-    #thrs = overall_optimise_f2_thresholds(Y_v, RV, nss)
-    #print 'overall thresholds', thrs
-    print 'opt_thresholds', opt_thresholds
-    #print 'valid overall score', get_fbeta_x(Y_v, RV, thrs)
-    print 'valid opt score', get_fbeta_x(Y_v, RV, opt_thresholds)
-    print 'valid def score', get_fbeta_x(Y_v, RV, [0.5]*17)
 
-    print 'thresholding result'
     def outputx(r, thrs, out_file):
         R = thr_pred(r, thrs)
         print 'Output'
@@ -299,9 +286,9 @@ def main():
                         res.append(nss[j])
                 wf.write('%s,%s\n' % (test_keys[i], ' '.join(res)))
 
-    #outputx(R, thrs, '/home/tyantov/workspace/kaggle-planet/results/avg_subm_stack1.csv')
-    outputx(R, opt_thresholds, '/home/tyantov/workspace/kaggle-planet/results/avg_subm_stack2.csv')
-    outputx(R, [0.5]*17, '/home/tyantov/workspace/kaggle-planet/results/avg_subm_stack3.csv')
+
+    outputx(R, opt_thresholds, '~/code/kaggle-planet/results/avg_subm_stack2.csv')
+    outputx(R, [0.5]*17, '~code/kaggle-planet/results/avg_subm_stack3.csv')
     sys.exit()
 
 
@@ -311,3 +298,4 @@ def main():
 
 if __name__ == '__main__':
     sys.exit(main())
+

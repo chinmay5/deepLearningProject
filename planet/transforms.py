@@ -264,27 +264,27 @@ def main():
     #print source, image_path
     for _ in xrange(100):
         new_x =  RandomSizedCropV2(224)(source)
-    #new_x.save('/home/tyantov/test.jpg')
 
-#    res = TenCrop(224)(source)
-#    for i, img in enumerate(res):
-#        img.save('/home/tyantov/test_%d.jpg' % i)
 
-    # x = ToTensor()(source)
-    # print source.getpixel((1, 1))
-    # print x[1]
-    # y = x#ColorJitter()(x)
-    # z = ToPILImage()(y)
-    # print z
-    # #z.save('/home/tyantov/test.jpg')
-    # print z.getpixel((1, 1))
-    # print np.mean(source), np.mean(z)
-    # import copy
-    # x = TenCropPick(224)
-    # for i in xrange(0,10):
-    #     x.index = i
-    #     img = x(copy.deepcopy(source))
-    #     img.save('/home/tyantov/test2_%d.jpg' % i)
+    res = TenCrop(224)(source)
+    for i, img in enumerate(res):
+        img.save('/home/chinmay/Desktop/TUM/Project-Flie/code-base/pytorch-kaggle-amazon-space/data2/test_%d.jpg' % i)
+
+    x = ToTensor()(source)
+    print source.getpixel((1, 1))
+    print x[1]
+    y = x#ColorJitter()(x)
+    #z = ToPILImage()(y)
+    #print z
+
+    #print z.getpixel((1, 1))
+    #print np.mean(source), np.mean(z)
+    import copy
+    x = TenCropPick(224)
+    for i in xrange(0,10):
+        x.index = i
+        img = x(copy.deepcopy(source))
+        img.save('/home/chinmay/Desktop/TUM/Project-Flie/code-base/pytorch-kaggle-amazon-space/data2/test2_%d.jpg' % i)
 
 
 if __name__ == '__main__':
