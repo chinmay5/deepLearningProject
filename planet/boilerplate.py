@@ -187,7 +187,7 @@ def load_checkpoint(filename):
     return checkpoint
 
 
-def train(train_loader, model, criterion, optimizer, epoch):
+def train(train_loader, model, criterion, optimizer, epoch, is_multi_fc=False):
     batch_time = AverageMeter()
     data_time = AverageMeter()
     losses = AverageMeter()
@@ -204,9 +204,17 @@ def train(train_loader, model, criterion, optimizer, epoch):
         input_var = torch.autograd.Variable(input)
         target_var = torch.autograd.Variable(target)
         # compute output
-        output = model(input_var)
-
-        loss = criterion(output, target_var)
+        if is_multi_fc==False:
+        # this is original loss function
+            output = model(input_var)
+            loss = criterion(output, target_var)
+        else:
+        # this is for inception_v3 with 2 output channels
+        # https://github.com/pytorch/vision/issues/302
+            output, output_aux = model(input_var)
+            loss = criterion(output, target_var)
+            loss+= criterion(output_aux, target_var)
+        
         # measure accuracy and record loss
         losses.update(loss.data[0], input.size(0))
 

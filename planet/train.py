@@ -198,7 +198,11 @@ class Trainer(object):
         logger.info('Starting learning single model')
         self._init_model()
         self.__rm_prev_checkpoints()
-
+        
+        is_multi_fc = False
+        if(config.model in ('inception_v3_','inception_v3_frozen')):
+            is_multi_fc = True 
+        
         optimizer = boilerplate.init_optimizer(self._model, config, exact_layers=self.__layers_to_optimize)
         start_epoch, best_score = self._init_checkpoint(optimizer, config)
         lr_scheduler = self._init_lr_scheduler(config, optimizer, best_score)
@@ -208,7 +212,7 @@ class Trainer(object):
         for epoch in xrange(start_epoch, config.epoch):
             logger.info('Epoch %d', epoch)
             # iterate
-            train_score = boilerplate.train(train_loader, self._model, criterion, optimizer, epoch)
+            train_score = boilerplate.train(train_loader, self._model, criterion, optimizer, epoch, is_multi_fc)
             score = boilerplate.validate(val_loader, self._model, criterion, activation=torch.sigmoid)
             self.monitor.add_performance('loss', train_score, score)
 
