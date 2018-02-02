@@ -1,0 +1,297 @@
+2018-01-30 21:15:35 Config: {'folds': 10, 'warm_up_epochs': 2, 'shard': '', 'seed': 0, 'weigh_loss': 0, 'lr_schedule': 'adaptive_best', 'holdout': 0, 'weight_decay': 0.0001, 'from_checkpoint': 0, 'train_percent': 0.8, 'workers': 2, 'test_batch_size': 320, 'transform': 'zoom_299', 'epoch': 50, 'lr': 0.1, 'momentum': 0.9, 'run_type': 'train', 'optimizer': 'sgd', 'data_type': 'jpg', 'batch_size': 64, 'blacklist': 0, 'max_stops': 3, 'weigh_sample': 0, 'early_stop_n': 6, 'decrease_rate': 0.1, 'model': 'inception_v3_'}
+2018-01-30 21:15:35 Loading train/val split from file
+2018-01-30 21:15:36 Starting learning single model
+2018-01-30 21:15:36 Initing model
+2018-01-30 21:15:43 Learning exact layers, number=20
+2018-01-30 21:15:43 Layer=0, lr=0.10000
+2018-01-30 21:15:43 Layer=1, lr=0.10000
+2018-01-30 21:15:43 Layer=2, lr=0.00001
+2018-01-30 21:15:43 Layer=3, lr=0.00001
+2018-01-30 21:15:43 Layer=4, lr=0.00001
+2018-01-30 21:15:43 Layer=5, lr=0.00001
+2018-01-30 21:15:43 Layer=6, lr=0.00001
+2018-01-30 21:15:43 Layer=7, lr=0.00100
+2018-01-30 21:15:43 Layer=8, lr=0.00100
+2018-01-30 21:15:43 Layer=9, lr=0.00100
+2018-01-30 21:15:43 Layer=10, lr=0.00100
+2018-01-30 21:15:43 Layer=11, lr=0.00100
+2018-01-30 21:15:43 Layer=12, lr=0.00100
+2018-01-30 21:15:43 Layer=13, lr=0.00100
+2018-01-30 21:15:43 Layer=14, lr=0.00100
+2018-01-30 21:15:43 Layer=15, lr=0.00100
+2018-01-30 21:15:43 Layer=16, lr=0.00100
+2018-01-30 21:15:43 Layer=17, lr=0.00100
+2018-01-30 21:15:43 Layer=18, lr=0.00001
+2018-01-30 21:15:43 Layer=19, lr=0.00001
+2018-01-30 21:15:43 Loss is MultiLabelSoftMarginLoss without weights
+2018-01-30 21:15:43 Epoch 0
+2018-01-30 21:19:28 Epoch: [0][50/507]	Time 3.826 (4.401)	Data 0.000 (0.014)	Accuracy 0.0000 (0.0000)	Loss 0.3601 (0.5059)	
+2018-01-30 21:22:46 Epoch: [0][100/507]	Time 4.061 (4.185)	Data 0.000 (0.007)	Accuracy 0.0000 (0.0000)	Loss 0.3381 (0.4353)	
+2018-01-30 21:26:01 Epoch: [0][150/507]	Time 3.799 (4.089)	Data 0.000 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.2696 (0.4002)	
+2018-01-30 21:29:15 Epoch: [0][200/507]	Time 3.942 (4.037)	Data 0.000 (0.004)	Accuracy 0.0000 (0.0000)	Loss 0.3298 (0.3796)	
+2018-01-30 21:32:28 Epoch: [0][250/507]	Time 3.950 (4.001)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.3147 (0.3674)	
+2018-01-30 21:35:42 Epoch: [0][300/507]	Time 3.934 (3.984)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.3144 (0.3580)	
+2018-01-30 21:38:56 Epoch: [0][350/507]	Time 3.855 (3.969)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3306 (0.3506)	
+2018-01-30 21:42:10 Epoch: [0][400/507]	Time 3.703 (3.956)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2844 (0.3445)	
+2018-01-30 21:45:24 Epoch: [0][450/507]	Time 3.669 (3.948)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2412 (0.3394)	
+2018-01-30 21:48:38 Epoch: [0][500/507]	Time 4.019 (3.942)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2669 (0.3350)	
+2018-01-30 21:49:25 Epoch: [0][506/507]	Time 27.066 (3.987)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3009 (0.3347)	
+2018-01-30 21:49:25 Validating model
+2018-01-30 21:51:56 Test: [126/126]	Time 8.819 (1.201)	Loss 0.41001	F2: 0.514012438511	
+2018-01-30 21:51:56 Current model is best by val score 0.41001 < -1.00000
+2018-01-30 21:51:56 early_stop_counter: 0
+2018-01-30 21:51:57 Epoch 1
+2018-01-30 21:55:14 Epoch: [1][50/507]	Time 3.907 (3.869)	Data 0.000 (0.014)	Accuracy 0.0000 (0.0000)	Loss 0.2988 (0.2907)	
+2018-01-30 21:58:26 Epoch: [1][100/507]	Time 3.945 (3.851)	Data 0.000 (0.007)	Accuracy 0.0000 (0.0000)	Loss 0.3238 (0.2896)	
+2018-01-30 22:01:37 Epoch: [1][150/507]	Time 3.921 (3.845)	Data 0.000 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.2908 (0.2911)	
+2018-01-30 22:04:52 Epoch: [1][200/507]	Time 3.958 (3.856)	Data 0.000 (0.004)	Accuracy 0.0000 (0.0000)	Loss 0.3034 (0.2905)	
+2018-01-30 22:08:08 Epoch: [1][250/507]	Time 3.938 (3.872)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.2632 (0.2904)	
+2018-01-30 22:11:23 Epoch: [1][300/507]	Time 3.897 (3.876)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.3182 (0.2892)	
+2018-01-30 22:14:38 Epoch: [1][350/507]	Time 3.952 (3.879)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3356 (0.2885)	
+2018-01-30 22:17:51 Epoch: [1][400/507]	Time 3.847 (3.875)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3249 (0.2878)	
+2018-01-30 22:21:05 Epoch: [1][450/507]	Time 3.907 (3.877)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2433 (0.2870)	
+2018-01-30 22:24:20 Epoch: [1][500/507]	Time 4.098 (3.878)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2809 (0.2860)	
+2018-01-30 22:24:42 Epoch: [1][506/507]	Time 2.884 (3.877)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2142 (0.2856)	
+2018-01-30 22:24:42 Validating model
+2018-01-30 22:27:06 Test: [126/126]	Time 0.976 (1.142)	Loss 0.48377	F2: 0.471920819416	
+2018-01-30 22:27:06 early_stop_counter: 1
+2018-01-30 22:27:08 Epoch 2
+2018-01-30 22:30:33 Epoch: [2][50/507]	Time 3.858 (4.026)	Data 0.000 (0.014)	Accuracy 0.0000 (0.0000)	Loss 0.3039 (0.2841)	
+2018-01-30 22:33:53 Epoch: [2][100/507]	Time 4.107 (4.008)	Data 0.000 (0.007)	Accuracy 0.0000 (0.0000)	Loss 0.2890 (0.2798)	
+2018-01-30 22:37:11 Epoch: [2][150/507]	Time 3.990 (3.993)	Data 0.000 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.3050 (0.2771)	
+2018-01-30 22:40:31 Epoch: [2][200/507]	Time 4.110 (3.993)	Data 0.000 (0.004)	Accuracy 0.0000 (0.0000)	Loss 0.4058 (0.2807)	
+2018-01-30 22:43:49 Epoch: [2][250/507]	Time 3.895 (3.987)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.2349 (0.2817)	
+2018-01-30 22:47:07 Epoch: [2][300/507]	Time 4.065 (3.983)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.3105 (0.2789)	
+2018-01-30 22:50:25 Epoch: [2][350/507]	Time 3.252 (3.981)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3498 (0.2786)	
+2018-01-30 22:53:46 Epoch: [2][400/507]	Time 3.790 (3.984)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2256 (0.2773)	
+2018-01-30 22:57:05 Epoch: [2][450/507]	Time 3.955 (3.985)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2304 (0.2767)	
+2018-01-30 23:00:26 Epoch: [2][500/507]	Time 4.011 (3.989)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3070 (0.2764)	
+2018-01-30 23:00:49 Epoch: [2][506/507]	Time 2.885 (3.987)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2535 (0.2765)	
+2018-01-30 23:00:49 Validating model
+2018-01-30 23:03:13 Test: [126/126]	Time 0.958 (1.138)	Loss 0.43678	F2: 0.563383225462	
+2018-01-30 23:03:13 early_stop_counter: 2
+2018-01-30 23:03:14 Epoch 3
+2018-01-30 23:06:34 Epoch: [3][50/507]	Time 4.319 (3.912)	Data 0.000 (0.015)	Accuracy 0.0000 (0.0000)	Loss 0.2894 (0.2682)	
+2018-01-30 23:09:48 Epoch: [3][100/507]	Time 4.005 (3.899)	Data 0.000 (0.008)	Accuracy 0.0000 (0.0000)	Loss 0.3320 (0.2719)	
+2018-01-30 23:13:03 Epoch: [3][150/507]	Time 3.886 (3.902)	Data 0.000 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.2268 (0.2708)	
+2018-01-30 23:16:16 Epoch: [3][200/507]	Time 3.881 (3.891)	Data 0.000 (0.004)	Accuracy 0.0000 (0.0000)	Loss 0.1781 (0.2711)	
+2018-01-30 23:19:29 Epoch: [3][250/507]	Time 4.001 (3.884)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.2691 (0.2706)	
+2018-01-30 23:22:43 Epoch: [3][300/507]	Time 3.945 (3.883)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.2516 (0.2706)	
+2018-01-30 23:25:57 Epoch: [3][350/507]	Time 3.954 (3.883)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2559 (0.2707)	
+2018-01-30 23:29:12 Epoch: [3][400/507]	Time 4.158 (3.884)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2187 (0.2701)	
+2018-01-30 23:32:26 Epoch: [3][450/507]	Time 4.026 (3.885)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2424 (0.2697)	
+2018-01-30 23:35:42 Epoch: [3][500/507]	Time 3.992 (3.887)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2972 (0.2691)	
+2018-01-30 23:36:03 Epoch: [3][506/507]	Time 2.702 (3.884)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2395 (0.2691)	
+2018-01-30 23:36:03 Validating model
+2018-01-30 23:38:27 Test: [126/126]	Time 0.901 (1.142)	Loss 0.47712	F2: 0.606653474547	
+2018-01-30 23:38:27 early_stop_counter: 3
+2018-01-30 23:38:27 Setting for group learning rate=0.01000000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.01000000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00000100, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00000100, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00000100, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00000100, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00000100, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00010000, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00000100, epoch=3
+2018-01-30 23:38:27 Setting for group learning rate=0.00000100, epoch=3
+2018-01-30 23:38:29 Loaded the model from previous best step
+2018-01-30 23:38:31 Loaded best model /home/tzaumiaan/clone_1/results/model_best.pth.tar, arch=inception_v3_
+2018-01-30 23:38:31 Epoch 4
+2018-01-30 23:41:55 Epoch: [4][50/507]	Time 4.004 (3.992)	Data 0.000 (0.015)	Accuracy 0.0000 (0.0000)	Loss 0.3642 (0.2991)	
+2018-01-30 23:45:15 Epoch: [4][100/507]	Time 4.035 (3.997)	Data 0.000 (0.008)	Accuracy 0.0000 (0.0000)	Loss 0.2624 (0.2911)	
+2018-01-30 23:48:34 Epoch: [4][150/507]	Time 4.285 (3.991)	Data 0.000 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.2693 (0.2897)	
+2018-01-30 23:51:54 Epoch: [4][200/507]	Time 3.999 (3.995)	Data 0.000 (0.004)	Accuracy 0.0000 (0.0000)	Loss 0.2732 (0.2907)	
+2018-01-30 23:55:14 Epoch: [4][250/507]	Time 3.669 (3.997)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.2562 (0.2896)	
+2018-01-30 23:58:33 Epoch: [4][300/507]	Time 3.891 (3.993)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.2779 (0.2884)	
+2018-01-31 00:01:52 Epoch: [4][350/507]	Time 3.913 (3.992)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2409 (0.2874)	
+2018-01-31 00:05:13 Epoch: [4][400/507]	Time 4.151 (3.995)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2786 (0.2877)	
+2018-01-31 00:08:32 Epoch: [4][450/507]	Time 3.993 (3.993)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2160 (0.2880)	
+2018-01-31 00:11:50 Epoch: [4][500/507]	Time 3.932 (3.990)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3052 (0.2867)	
+2018-01-31 00:12:13 Epoch: [4][506/507]	Time 2.765 (3.987)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3211 (0.2869)	
+2018-01-31 00:12:13 Validating model
+2018-01-31 00:14:37 Test: [126/126]	Time 0.916 (1.142)	Loss 0.44532	F2: 0.516018568181	
+2018-01-31 00:14:37 early_stop_counter: 4
+2018-01-31 00:14:38 Epoch 5
+2018-01-31 00:17:58 Epoch: [5][50/507]	Time 3.937 (3.924)	Data 0.001 (0.015)	Accuracy 0.0000 (0.0000)	Loss 0.2853 (0.2843)	
+2018-01-31 00:21:12 Epoch: [5][100/507]	Time 3.793 (3.896)	Data 0.000 (0.008)	Accuracy 0.0000 (0.0000)	Loss 0.2616 (0.2809)	
+2018-01-31 00:24:25 Epoch: [5][150/507]	Time 3.925 (3.887)	Data 0.001 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.2882 (0.2800)	
+2018-01-31 00:27:39 Epoch: [5][200/507]	Time 3.891 (3.886)	Data 0.000 (0.004)	Accuracy 0.0000 (0.0000)	Loss 0.3710 (0.2831)	
+2018-01-31 00:30:51 Epoch: [5][250/507]	Time 3.835 (3.876)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.1894 (0.2831)	
+2018-01-31 00:34:05 Epoch: [5][300/507]	Time 3.899 (3.875)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.3021 (0.2840)	
+2018-01-31 00:37:17 Epoch: [5][350/507]	Time 3.895 (3.872)	Data 0.001 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.2570 (0.2845)	
+2018-01-31 00:40:32 Epoch: [5][400/507]	Time 3.954 (3.874)	Data 0.001 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2885 (0.2855)	
+2018-01-31 00:43:45 Epoch: [5][450/507]	Time 3.893 (3.874)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2911 (0.2855)	
+2018-01-31 00:46:58 Epoch: [5][500/507]	Time 4.010 (3.872)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2418 (0.2847)	
+2018-01-31 00:47:20 Epoch: [5][506/507]	Time 2.809 (3.869)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.1998 (0.2847)	
+2018-01-31 00:47:20 Validating model
+2018-01-31 00:49:44 Test: [126/126]	Time 0.907 (1.142)	Loss 0.42681	F2: 0.547220452024	
+2018-01-31 00:49:44 early_stop_counter: 5
+2018-01-31 00:49:46 Epoch 6
+2018-01-31 00:53:09 Epoch: [6][50/507]	Time 3.908 (3.996)	Data 0.000 (0.014)	Accuracy 0.0000 (0.0000)	Loss 0.2810 (0.2867)	
+2018-01-31 00:56:28 Epoch: [6][100/507]	Time 4.072 (3.982)	Data 0.001 (0.008)	Accuracy 0.0000 (0.0000)	Loss 0.2580 (0.2854)	
+2018-01-31 00:59:48 Epoch: [6][150/507]	Time 4.064 (3.988)	Data 0.000 (0.005)	Accuracy 0.0000 (0.0000)	Loss 0.2740 (0.2828)	
+2018-01-31 01:03:04 Epoch: [6][200/507]	Time 3.993 (3.973)	Data 0.000 (0.004)	Accuracy 0.0000 (0.0000)	Loss 0.2324 (0.2795)	
+2018-01-31 01:05:44 Epoch: [6][250/507]	Time 4.119 (3.819)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.3652 (0.2829)	
+2018-01-31 01:09:12 Epoch: [6][300/507]	Time 4.241 (3.875)	Data 0.000 (0.003)	Accuracy 0.0000 (0.0000)	Loss 0.3228 (0.2814)	
+2018-01-31 01:12:39 Epoch: [6][350/507]	Time 4.058 (3.912)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2879 (0.2824)	
+2018-01-31 01:16:07 Epoch: [6][400/507]	Time 4.192 (3.944)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3039 (0.2816)	
+2018-01-31 01:19:33 Epoch: [6][450/507]	Time 4.051 (3.964)	Data 0.001 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.2546 (0.2818)	
+2018-01-31 01:23:03 Epoch: [6][500/507]	Time 4.236 (3.986)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.1799 (0.2821)	
+2018-01-31 01:23:26 Epoch: [6][506/507]	Time 3.013 (3.985)	Data 0.000 (0.002)	Accuracy 0.0000 (0.0000)	Loss 0.3006 (0.2823)	
+2018-01-31 01:23:26 Validating model
+2018-01-31 01:25:54 Test: [126/126]	Time 0.960 (1.176)	Loss 0.43026	F2: 0.542439171764	
+2018-01-31 01:25:54 Early stopping, regress for 6 iterations
+2018-01-31 01:25:54 early_stop_counter: 6
+2018-01-31 01:25:54 Setting for group learning rate=0.00100000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00100000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00000010, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00000010, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00000010, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00000010, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00000010, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00001000, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00000010, epoch=6
+2018-01-31 01:25:54 Setting for group learning rate=0.00000010, epoch=6
+2018-01-31 01:25:56 Exiting learning process
+2018-01-31 01:25:56 Initing model
+2018-01-31 01:26:02 Loaded best model /home/tzaumiaan/clone_1/results/model_best.pth.tar, arch=inception_v3_
+2018-01-31 01:26:02 Estimating thresholds
+2018-01-31 01:28:31 	 slice=0, name=agriculture, best_threshold=0.010, metric=0.6858
+2018-01-31 01:28:32 	 slice=1, name=artisinal_mine, best_threshold=0.010, metric=0.6858
+2018-01-31 01:28:34 	 slice=2, name=bare_ground, best_threshold=0.020, metric=0.6858
+2018-01-31 01:28:35 	 slice=3, name=blooming, best_threshold=0.010, metric=0.6858
+2018-01-31 01:28:36 	 slice=4, name=blow_down, best_threshold=0.010, metric=0.6858
+2018-01-31 01:28:38 	 slice=5, name=clear, best_threshold=0.470, metric=0.6873
+2018-01-31 01:28:39 	 slice=6, name=cloudy, best_threshold=0.110, metric=0.6920
+2018-01-31 01:28:40 	 slice=7, name=conventional_mine, best_threshold=0.010, metric=0.6920
+2018-01-31 01:28:42 	 slice=8, name=cultivation, best_threshold=0.010, metric=0.6920
+2018-01-31 01:28:43 	 slice=9, name=habitation, best_threshold=0.010, metric=0.6925
+2018-01-31 01:28:44 	 slice=10, name=haze, best_threshold=0.020, metric=0.6925
+2018-01-31 01:28:46 	 slice=11, name=partly_cloudy, best_threshold=0.000, metric=0.7052
+2018-01-31 01:28:47 	 slice=12, name=primary, best_threshold=0.230, metric=0.7053
+2018-01-31 01:28:49 	 slice=13, name=road, best_threshold=0.020, metric=0.7151
+2018-01-31 01:28:50 	 slice=14, name=selective_logging, best_threshold=0.010, metric=0.7151
+2018-01-31 01:28:51 	 slice=15, name=slash_burn, best_threshold=0.010, metric=0.7151
+2018-01-31 01:28:53 	 slice=16, name=water, best_threshold=0.630, metric=0.7270
+2018-01-31 01:28:53 Precision/recall for each category
+2018-01-31 01:28:53 	 name=agriculture, count=12315, pre=0.4171, recall=0.7384
+2018-01-31 01:28:53 	 name=artisinal_mine, count=339, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=bare_ground, count=862, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=blooming, count=332, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=blow_down, count=101, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=clear, count=28431, pre=0.7389, recall=0.9984
+2018-01-31 01:28:53 	 name=cloudy, count=2089, pre=0.1923, recall=0.6552
+2018-01-31 01:28:53 	 name=conventional_mine, count=100, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=cultivation, count=4547, pre=0.2727, recall=0.0034
+2018-01-31 01:28:53 	 name=habitation, count=3660, pre=0.7857, recall=0.0303
+2018-01-31 01:28:53 	 name=haze, count=2697, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=partly_cloudy, count=7261, pre=0.1804, recall=1.0000
+2018-01-31 01:28:53 	 name=primary, count=37513, pre=0.9308, recall=0.9992
+2018-01-31 01:28:53 	 name=road, count=8071, pre=0.4440, recall=0.4471
+2018-01-31 01:28:53 	 name=selective_logging, count=340, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=slash_burn, count=209, pre=0.0000, recall=0.0000
+2018-01-31 01:28:53 	 name=water, count=7411, pre=0.3028, recall=0.4824
+2018-01-31 01:29:00 F2 score before applying tresholds is 0.615447
+2018-01-31 01:29:00 F2 score after applying tresholds is 0.727039
+2018-01-31 01:29:00 Testing transformation 1/10
+2018-01-31 01:29:00 Testing
+2018-01-31 01:31:25 Batch 20
+2018-01-31 01:33:12 Batch 40
+2018-01-31 01:34:58 Batch 60
+2018-01-31 01:36:45 Batch 80
+2018-01-31 01:38:31 Batch 100
+2018-01-31 01:40:18 Batch 120
+2018-01-31 01:40:58 Testing transformation 2/10
+2018-01-31 01:40:58 Testing
+2018-01-31 01:42:52 Batch 20
+2018-01-31 01:44:39 Batch 40
+2018-01-31 01:46:26 Batch 60
+2018-01-31 01:48:08 Batch 80
+2018-01-31 01:49:57 Batch 100
+2018-01-31 01:51:42 Batch 120
+2018-01-31 01:52:14 Testing transformation 3/10
+2018-01-31 01:52:14 Testing
+2018-01-31 01:54:08 Batch 20
+2018-01-31 01:55:55 Batch 40
+2018-01-31 01:57:43 Batch 60
+2018-01-31 01:59:29 Batch 80
+2018-01-31 02:01:15 Batch 100
+2018-01-31 02:03:02 Batch 120
+2018-01-31 02:03:34 Testing transformation 4/10
+2018-01-31 02:03:34 Testing
+2018-01-31 02:05:28 Batch 20
+2018-01-31 02:07:15 Batch 40
+2018-01-31 02:09:02 Batch 60
+2018-01-31 02:10:50 Batch 80
+2018-01-31 02:12:37 Batch 100
+2018-01-31 02:14:24 Batch 120
+2018-01-31 02:14:56 Testing transformation 5/10
+2018-01-31 02:14:56 Testing
+2018-01-31 02:16:50 Batch 20
+2018-01-31 02:18:36 Batch 40
+2018-01-31 02:20:22 Batch 60
+2018-01-31 02:22:09 Batch 80
+2018-01-31 02:23:55 Batch 100
+2018-01-31 02:25:41 Batch 120
+2018-01-31 02:26:14 Testing transformation 6/10
+2018-01-31 02:26:14 Testing
+2018-01-31 02:28:09 Batch 20
+2018-01-31 02:29:56 Batch 40
+2018-01-31 02:31:43 Batch 60
+2018-01-31 02:33:30 Batch 80
+2018-01-31 02:35:17 Batch 100
+2018-01-31 02:37:05 Batch 120
+2018-01-31 02:37:38 Testing transformation 7/10
+2018-01-31 02:37:38 Testing
+2018-01-31 02:39:30 Batch 20
+2018-01-31 02:41:16 Batch 40
+2018-01-31 02:43:03 Batch 60
+2018-01-31 02:44:50 Batch 80
+2018-01-31 02:46:37 Batch 100
+2018-01-31 02:48:24 Batch 120
+2018-01-31 02:48:57 Testing transformation 8/10
+2018-01-31 02:48:57 Testing
+2018-01-31 02:50:51 Batch 20
+2018-01-31 02:52:37 Batch 40
+2018-01-31 02:54:25 Batch 60
+2018-01-31 02:56:11 Batch 80
+2018-01-31 02:57:57 Batch 100
+2018-01-31 02:59:44 Batch 120
+2018-01-31 03:00:16 Testing transformation 9/10
+2018-01-31 03:00:16 Testing
+2018-01-31 03:02:11 Batch 20
+2018-01-31 03:03:58 Batch 40
+2018-01-31 03:05:43 Batch 60
+2018-01-31 03:07:30 Batch 80
+2018-01-31 03:09:16 Batch 100
+2018-01-31 03:11:03 Batch 120
+2018-01-31 03:11:35 Testing transformation 10/10
+2018-01-31 03:11:35 Testing
+2018-01-31 03:13:29 Batch 20
+2018-01-31 03:15:15 Batch 40
+2018-01-31 03:17:01 Batch 60
+2018-01-31 03:18:48 Batch 80
+2018-01-31 03:20:34 Batch 100
+2018-01-31 03:22:21 Batch 120
+2018-01-31 03:22:56 {0: 'agriculture', 1: 'artisinal_mine', 2: 'bare_ground', 3: 'blooming', 4: 'blow_down', 5: 'clear', 6: 'cloudy', 7: 'conventional_mine', 8: 'cultivation', 9: 'habitation', 10: 'haze', 11: 'partly_cloudy', 12: 'primary', 13: 'road', 14: 'selective_logging', 15: 'slash_burn', 16: 'water'}
