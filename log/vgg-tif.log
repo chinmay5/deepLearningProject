@@ -225,35 +225,3 @@
 2018-02-02 21:58:12 F2 score before applying tresholds is 0.790749
 2018-02-02 21:58:12 F2 score after applying tresholds is 0.855172
 2018-02-02 21:58:13 Testing transformation 1/6
-2018-02-02 21:58:13 Testing
-2018-02-02 21:58:46 Traceback (most recent call last):
-  File "train.py", line 502, in main
-    tr.run(config)
-  File "train.py", line 230, in run
-    self.test_and_submit(config, val_loader)
-  File "train.py", line 415, in test_and_submit
-    names, final_results = self.test_model(config)
-  File "train.py", line 376, in test_model
-    names, crop_results = boilerplate.test_model(test_loader, self._model, activation=torch.sigmoid)
-  File "/home/chinmay/code/pytorch-kaggle-amazon-space/planet/boilerplate.py", line 310, in test_model
-    output = model(input_var)
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/modules/module.py", line 325, in __call__
-    result = self.forward(*input, **kwargs)
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/parallel/data_parallel.py", line 66, in forward
-    return self.module(*inputs[0], **kwargs[0])
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/modules/module.py", line 325, in __call__
-    result = self.forward(*input, **kwargs)
-  File "/home/chinmay/code/pytorch-kaggle-amazon-space/planet/tif_model.py", line 124, in forward
-    x = self.features(x)
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/modules/module.py", line 325, in __call__
-    result = self.forward(*input, **kwargs)
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/modules/container.py", line 67, in forward
-    input = module(input)
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/modules/module.py", line 325, in __call__
-    result = self.forward(*input, **kwargs)
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/modules/conv.py", line 277, in forward
-    self.padding, self.dilation, self.groups)
-  File "/home/chinmay/.local/lib/python2.7/site-packages/torch/nn/functional.py", line 90, in conv2d
-    return f(input, weight, bias)
-RuntimeError: cuda runtime error (2) : out of memory at /pytorch/torch/lib/THC/generic/THCStorage.cu:58
-
